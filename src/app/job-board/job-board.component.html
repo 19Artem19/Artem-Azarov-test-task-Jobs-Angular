@@ -1,0 +1,7 @@
+<h1>JOB title</h1>
+<div class="data" *ngFor="let data of dataset">
+    <p>name:{{data.id}}</p>
+    <p>description: {{data.title}}</p>
+    <p>posted: {{data.createdAt | date: 'dd.MM.yyyy'  }}</p>
+    <p>Location: {{data.location.lat}}</p>
+</div>
