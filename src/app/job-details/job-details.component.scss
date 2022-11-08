@@ -1,0 +1,66 @@
+* p,
+h2 {
+    color: #3A4562;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+.details-wrapper {
+    display: flex;
+
+    .job-details {
+        width: 774px;
+        height: 1761px;
+        border: 1px solid red;
+        margin-left: 347px;
+    }
+}
+
+.job-details-share {
+    display: flex;
+    width: 723px;
+    height: 44px;
+    border-bottom: 1px solid rgba(58, 69, 98, 0.13); //?сделал прозрачность бордера так, возможно не верно
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .save-share-job {
+        //? лучше ничего не придумал, хотя ты забракуешь полюбому))
+        display: flex;
+
+        .save-job {
+            display: flex;
+            margin-right: 30px;
+
+            p {
+                padding-left: 15px;
+            }
+        }
+
+        .share-job {
+            display: flex;
+
+            p {
+                padding-left: 15px;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+}
+
+.job-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 723px;
+    padding-top: 32px;
+
+    .job-title {
+        width: 501px;
+    }
+}
