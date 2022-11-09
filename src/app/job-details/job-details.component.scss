@@ -1,10 +1,23 @@
-* p,
-h2 {
+*p,
+li {
     color: #3A4562;
     font-size: 18px;
     line-height: 24px;
 }
 
+*h2 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: #3A4562;
+}
+
+*h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #3A4562;
+}
 
 .details-wrapper {
     display: flex;
@@ -25,6 +38,7 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     .save-share-job {
         //? лучше ничего не придумал, хотя ты забракуешь полюбому))
@@ -47,11 +61,6 @@ h2 {
             }
         }
     }
-
-    h2 {
-        font-size: 28px;
-        line-height: 34px;
-    }
 }
 
 .job-title-wrapper {
@@ -62,5 +71,155 @@ h2 {
 
     .job-title {
         width: 501px;
+    }
+}
+
+
+.job-description-wrapper {
+    width: 721px;
+    // border: 1px solid orange;
+
+    .job-responsibilities {
+        margin-top: 20px;
+    }
+
+    .job-compensation {
+        margin-top: 20px;
+
+        .job-compensation-list li {
+            list-style: none;
+
+            &::before {
+                content: url('../../assets/Icons/square.svg');
+                //?position relative для вынесения за пределы блока
+            }
+
+            &:last-child {
+                margin-bottom: 20px; //? не смогу высчитать расстояние
+            }
+
+        }
+
+    }
+}
+
+.job-addiditional-info {
+    margin-top: 87px;
+}
+
+.job-attached-info {
+    margin-top: 87px;
+}
+
+.job-type {
+    margin-top: 15px;
+
+    .job-type-button {
+        width: 222px;
+        height: 49px;
+        background: rgba(161, 177, 219, 0.317343); //!
+        // background: #a1b1db;
+        // opacity: 0.3;
+        border-radius: 8px;
+        color: #55699E;
+        font-size: 16px;
+        line-height: 16px;
+        border: 1px solid rgba(85, 105, 158, 0.3); //!
+        margin: 10px 8px 0 0;
+        cursor: pointer;
+    }
+
+}
+
+.job-benefits {
+    margin-top: 23px;
+
+    .job-benefits-button {
+        width: 222px;
+        height: 49px;
+        background: rgba(255, 207, 0, 0.15); //!
+        // background: #a1b1db;
+        // opacity: 0.3;
+        border-radius: 8px;
+        color: #988B49;
+        font-size: 16px;
+        line-height: 16px;
+        border: 1px solid #FFCF00; //!
+        margin: 10px 8px 0 0;
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.job-addiditional-info {
+    width: 723px;
+    height: 44px;
+    border-bottom: 1px solid rgba(58, 69, 98, 0.13)
+}
+
+.job-attached-info {
+    margin-top: 87px;
+    width: 723px;
+    height: 44px;
+    border-bottom: 1px solid rgba(58, 69, 98, 0.13)
+}
+
+.return-job-board {
+    width: 213px;
+    height: 50px;
+    background: rgba(56, 69, 100, 0.14); //!
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    border: none;
+    cursor: pointer;
+    color: #3A4562;
+
+
+
+    &::before {
+        content: url('../../assets/Icons/arrow-back.svg'); //? не могу выровнять!!!
+        // padding: 16px 19px 16px 23px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+.job-contact-section {
+    width: 402px;
+    height: 436px;
+    border: 1px solid blue;
+    margin-left: 134px;
+    // display: flex;
+    // flex-direction: column;
+    // flex-grow: 2;
+
+    .job-contact {
+        border-bottom: 1px solid red;
+        height: 50%; //!
+        background-color: #2A3047;
+        position: relative;
+        z-index: 1;
+
+        .some {
+            width: 50%;
+            height: 100%;
+            // border-radius: 112px 0px 0px 111px;
+            border-radius: 0 112px 111px 0;
+            background-color: #202336;
+        }
+
+        p {
+            color: red;
+        }
     }
 }
