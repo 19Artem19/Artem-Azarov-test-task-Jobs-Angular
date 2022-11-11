@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ConfigService } from '../services/config.service';
-
+import { JobsService, Job } from '../../../services';
 @Component({
   selector: 'app-job-board',
   templateUrl: './job-board.component.html',
@@ -10,16 +9,15 @@ import { ConfigService } from '../services/config.service';
 
 export class JobBoardComponent implements OnInit {
 
-  dataset: any;
+  jobs: Job[] = [];
 
-  constructor(private configService: ConfigService) { }
+  constructor(private jobsService: JobsService) {}
 
   ngOnInit(): void {
-    this.configService.getData()
-      .subscribe((value) => {
-        this.dataset = value
-        console.log(this.dataset);
-      })
+    this.jobsService.getJobs().subscribe((jobs) => {
+      this.jobs = jobs;
+      console.log('jobs', this.jobs);
+    });
   }
 
 
