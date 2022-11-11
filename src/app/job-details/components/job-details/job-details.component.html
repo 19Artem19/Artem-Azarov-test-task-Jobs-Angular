@@ -1,14 +1,14 @@
-<div class="details-wrapper">
-    <div class="job-details">
-        <div class="job-details-share">
+<div class="details">
+    <div class="details__job">
+        <div class="details__share">
             <h2>Job Details</h2>
-            <div class="save-share-job">
-                <div class="save-job">
+            <div class="details__target">
+                <div class="details__save">
                     <svg-icon src="../../assets/Icons/save.svg" [svgStyle]="{ 'width.px':16,'height.px':20 }">
                     </svg-icon>
                     <p>Save to my list</p>
                 </div>
-                <div class="share-job">
+                <div class="details__divide">
                     <svg-icon src="../../assets/Icons/share.svg" [svgStyle]="{ 'width.px':18,'height.px':20 }">
                     </svg-icon>
                     <p>Share</p>
@@ -16,77 +16,76 @@
             </div>
         </div>
         <app-apply-job></app-apply-job>
-        <div class="job-title-wrapper">
-            <div class="job-title">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint laborum ducimus dignissimos deleniti
-                    ipsa, minima doloremque suscipit repellendus eligendi in dolor provident eaque quisquam, mollitia
-                    veniam
-                    nulla? Tempore eligendi cupiditate hic, consequatur magnam iure id asperiores adipisci sequi qui
-                    mollitia recusandae inventore! Ut accusamus cupiditate aspernatur amet voluptate harum porro.</p>
+        <div class="title">
+            <div class="title__job">
+                <p>{{job?.title}}</p>
             </div>
-            <div class="job-salary">
-                <p>€ 54 000—60 000</p>
+            <div class="title__salary">
+                <h3>{{job?.salary}}</h3>
                 <p>Brutto,per year</p>
             </div>
 
         </div>
-        <div class="job-post">
-            <p> posted: 2 days ago</p>
+        <div class="title__post">
+            <p>{{job?.createdAt}}</p>
         </div>
-        <div class="job-description-wrapper">
-            <div class="job-description">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, tempore dolorem. Cum, sit
+        <div class="description">
+            <div class="description__job">
+                <p> ??? ??? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, tempore dolorem. Cum,
+                    sit
                     doloremque! Ullam ducimus aperiam in nesciunt illo recusandae ab ipsa atque aliquam? Libero aliquam
                     laborum blanditiis architecto qui ex laudantium eos, aperiam voluptate ea adipisci fugit amet.</p>
             </div>
-            <div class="job-responsibilities">
+            <div class="description__responsibilities">
                 <h3>Responsibilities</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quasi hic placeat, reprehenderit
-                    esse repellendus quis asperiores tempore laudantium culpa voluptatibus in illo enim cupiditate
-                    veniam maxime <br>pariatur deleniti nisi atque perferendis quaerat laboriosam ducimus, rerum dolor?
-                    Est
-                    dolorum quo, modi sunt recusandae accusantium magnam eum id consectetur aliquid provident, ad nihil
-                    placeat blanditiis<br> aut veniam eligendi deserunt. Qui corporis autem ipsam ea odio sapiente
-                    debitis
-                    impedit, cumque ipsum velit.
-                </p>
+                <p>{{job?.description}}</p>
             </div>
-            <div class="job-compensation">
+            <div class="description__compensation">
                 <h3>Compensation & Benefits</h3>
-                <ul class="job-compensation-list"> Our compensation
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                <ul class="description__compensation--list">
+                    <p> Our physicians enjoy a wide range of benefits, including:</p>
+                    <ng-container *ngFor="let optiions of job?.benefits |keyvalue ">
+                        <li>{{optiions.value}}</li>
+                    </ng-container>
                 </ul>
             </div>
         </div>
         <app-apply-job></app-apply-job>
-        <div class="job-addiditional-info">
+        <div class="addiditional">
             <h2>Addiditional Info</h2>
         </div>
-        <div class="job-type">
-            <p>Employment Type</p>
-            <button class="job-type-button">Full Time</button>
+        <h4>Employment Type</h4>
+        <div class="type">
+            <ng-container *ngFor="let type of job?.employment_type|keyvalue">
+                <span class="type__options">{{type.value}}</span>
+            </ng-container>
         </div>
-        <div class="job-benefits">
-            <p>Benefits</p>
-            <button class="job-benefits-button">Relocation</button>
+        <h4>Benefits</h4>
+        <div class="benefits">
+            <ng-container *ngFor="let benefit of job?.benefits|keyvalue">
+                <span class="benefits__options">{{benefit.value}}</span>
+            </ng-container>
         </div>
-        <div class="job-attached-info">
+        <div class="attached">
             <h2>Attahced images</h2>
-            <img [src]="">
+            <ng-container *ngFor="let image of job?.pictures|keyvalue">
+                <img [src]="image.value">
+            </ng-container>
         </div>
-        <button class="return-job-board">
-            RETURN TO A JOB BOARD
-        </button>
+        <div class="return">
+            <button class="return__board" [routerLink]="['/']">
+                RETURN TO A JOB BOARD
+            </button>
+        </div>
     </div>
-    <div class="job-contact-section">
-        <div class="job-contact">
-            <div class="some"></div>
+    <div class="contact">
+        <div class="contact__job">
+            <div class="contact__info"></div>
             <p>1</p>
             <p>2</p>
         </div>
-        <div class="job-map"></div>
+        <div class="contact__map"></div>
     </div>
 </div>
+
+

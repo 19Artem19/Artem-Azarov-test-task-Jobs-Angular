@@ -1,7 +1,7 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable} from 'rxjs';
 
 export interface Job {
   id: string;
@@ -51,6 +51,8 @@ export class JobsService {
       })
     );
   }
+
+  
 
   private getDataFromService(): Observable<Job[]> {
     return this.http.get<Job[]>(`${this.url}?access_token=${this.accessToken}`);

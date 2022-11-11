@@ -1,21 +1,43 @@
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ProximaNova-Semibold";
+    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Semibold.ttf) format("truetype");
+}
+
+
 * p {
     font-size: 16px;
     line-height: 25px;
     color: #878D9D;
+    font-family: "ProximaNova-Regular";
+
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: "ProximaNova-Bold", sans-serif;
 }
 
 .job-wrapper {
     width: 1400px;
-    height: 2572px;
     left: 260px;
     top: 29px;
     position: absolute;
 
-    .job-info {
+    .job {
         display: flex;
         flex-direction: row;
         width: 1400px;
-        height: 164px;
         margin-bottom: 10px;
         padding: 24px 16px;
         background-color: #FFFFFF;
@@ -23,8 +45,9 @@
             0px 2px 1px -1px rgba(0, 0, 0, 0.04),
             0px 1px 3px rgba(0, 0, 0, 0.12);
         border-radius: 8px;
+        cursor: pointer;
 
-        .job-image {
+        .job__image {
             width: 85px;
             height: 85px;
 
@@ -39,17 +62,16 @@
 
 }
 
-.job-description {
+.job__description {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-left: 26px;
 
-    .job-title {
+    .job__title {
         width: 959px;
-        height: 116px;
 
-        .job-address {
+        .job__address {
             display: flex;
 
             p {
@@ -62,20 +84,19 @@
         }
     }
 
-    .job-rating {
+    .job__rating {
         margin-left: 26px;
     }
 
 
-    .job-select {
+    .job__select {
         width: 138px;
-        height: 116px;
         margin-left: 32px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
 
-        .job-post {
+        .job__post {
             margin-top: 70px;
         }
 

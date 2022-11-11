@@ -1,8 +1,24 @@
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "ProximaNova-Semibold";
+    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Semibold.ttf) format("truetype");
+}
+
 *p,
 li {
     color: #3A4562;
     font-size: 18px;
     line-height: 24px;
+    font-family: 'Roboto';
 }
 
 *h2 {
@@ -10,6 +26,7 @@ li {
     font-size: 28px;
     line-height: 34px;
     color: #3A4562;
+    font-family: 'ProximaNova-Bold';
 }
 
 *h3 {
@@ -17,20 +34,26 @@ li {
     font-size: 20px;
     line-height: 25px;
     color: #3A4562;
+    font-family: 'ProximaNova-Bold';
 }
 
-.details-wrapper {
+*h4 {
+    color: #3A4562;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Roboto';
+}
+
+.details {
     display: flex;
 
-    .job-details {
+    .details__job {
         width: 774px;
-        height: 1761px;
-        border: 1px solid red;
         margin-left: 347px;
     }
 }
 
-.job-details-share {
+.details__share {
     display: flex;
     width: 723px;
     height: 44px;
@@ -40,11 +63,11 @@ li {
     justify-content: space-between;
     margin-bottom: 20px;
 
-    .save-share-job {
+    .details__target {
         //? лучше ничего не придумал, хотя ты забракуешь полюбому))
         display: flex;
 
-        .save-job {
+        .details__save {
             display: flex;
             margin-right: 30px;
 
@@ -53,7 +76,7 @@ li {
             }
         }
 
-        .share-job {
+        .details__divide {
             display: flex;
 
             p {
@@ -63,34 +86,50 @@ li {
     }
 }
 
-.job-title-wrapper {
+
+
+.title {
     display: flex;
     justify-content: space-between;
     width: 723px;
     padding-top: 32px;
 
-    .job-title {
+
+    .title__job {
         width: 501px;
+
+        p {
+            font-size: 24px;
+            line-height: 30px;
+            font-family: "ProximaNova-Bold";
+        }
+    }
+}
+
+.title__post {
+    p {
+        color: #878D9D;
+        opacity: 0.4;
+        // color: rgba(56, 65, 93, 0.355988);
     }
 }
 
 
-.job-description-wrapper {
+.description {
     width: 721px;
-    // border: 1px solid orange;
 
-    .job-responsibilities {
+    .description__responsibilities {
         margin-top: 20px;
     }
 
-    .job-compensation {
+    .description__compensation {
         margin-top: 20px;
 
-        .job-compensation-list li {
+        .description__compensation--list li {
             list-style: none;
 
             &::before {
-                content: url('../../assets/Icons/square.svg');
+                content: url('/assets/Icons/square.svg');
                 //?position relative для вынесения за пределы блока
             }
 
@@ -103,7 +142,7 @@ li {
     }
 }
 
-.job-addiditional-info {
+.addiditional {
     margin-top: 87px;
 }
 
@@ -111,10 +150,13 @@ li {
     margin-top: 87px;
 }
 
-.job-type {
-    margin-top: 15px;
+.type {
+    display: flex;
 
-    .job-type-button {
+    .type__options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 222px;
         height: 49px;
         background: rgba(161, 177, 219, 0.317343); //!
@@ -131,10 +173,13 @@ li {
 
 }
 
-.job-benefits {
-    margin-top: 23px;
+.benefits {
+    display: flex;
 
-    .job-benefits-button {
+    .benefits__options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 222px;
         height: 49px;
         background: rgba(255, 207, 0, 0.15); //!
@@ -152,27 +197,20 @@ li {
 
 
 
-
-
-
-
-
-
-
-.job-addiditional-info {
+.addiditional {
     width: 723px;
     height: 44px;
     border-bottom: 1px solid rgba(58, 69, 98, 0.13)
 }
 
-.job-attached-info {
+.attached {
     margin-top: 87px;
     width: 723px;
     height: 44px;
     border-bottom: 1px solid rgba(58, 69, 98, 0.13)
 }
 
-.return-job-board {
+.return__board {
     width: 213px;
     height: 50px;
     background: rgba(56, 69, 100, 0.14); //!
@@ -186,7 +224,7 @@ li {
 
 
     &::before {
-        content: url('../../assets/Icons/arrow-back.svg'); //? не могу выровнять!!!
+        content: url('/assets/Icons/arrow-back.svg'); //? не могу выровнять!!!
         // padding: 16px 19px 16px 23px;
         display: inline-block;
         vertical-align: middle;
@@ -194,7 +232,7 @@ li {
 }
 
 
-.job-contact-section {
+.contact {
     width: 402px;
     height: 436px;
     border: 1px solid blue;
@@ -203,14 +241,14 @@ li {
     // flex-direction: column;
     // flex-grow: 2;
 
-    .job-contact {
+    .contact__job {
         border-bottom: 1px solid red;
         height: 50%; //!
         background-color: #2A3047;
         position: relative;
         z-index: 1;
 
-        .some {
+        .contact__info {
             width: 50%;
             height: 100%;
             border-radius: 0 112px 111px 0;

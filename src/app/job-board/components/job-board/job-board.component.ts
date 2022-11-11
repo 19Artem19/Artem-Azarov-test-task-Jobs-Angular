@@ -19,6 +19,11 @@ export class JobBoardComponent implements OnInit {
       console.log('jobs', this.jobs);
     });
   }
+  
+  saveJob(event: MouseEvent, id: number) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
 
 
 }

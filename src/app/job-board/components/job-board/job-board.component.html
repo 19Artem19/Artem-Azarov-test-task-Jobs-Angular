@@ -1,26 +1,28 @@
 <div class="job-wrapper">
-    <div class="job-info" *ngFor="let data of jobs">
-        <div class="job-image">
-            <img [src]="data.pictures[0]">
+    <div class="job" *ngFor="let data of jobs" [routerLink]="['/details', data.id]">
+        <div class="job__image">
+            <img [src]="data.pictures[0]" />
         </div>
-        <div class="job-description">
-            <div class="job-title">
-                <h2>{{data.title}}</h2>
-                <p>Department Name * {{data.name}}</p>
-                <div class="job-address">
-                    <svg-icon src="../../assets/Icons/address.svg"
-                        [svgStyle]="{ 'width.px':13,'height.px':18,'fill':'#878D9D' }"></svg-icon>
-                    <p>{{data.address}}</p>
+        <div class="job__description">
+            <div class="job__title">
+                <h2>{{ data.title }}</h2>
+                <p>Department Name * {{ data.name }}</p>
+                <div class="job__address">
+                    <svg-icon src="/assets/Icons/address.svg"
+                        [svgStyle]="{ 'width.px': 13, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
+                    <p>{{ data.address }}</p>
                 </div>
             </div>
-            <div class="job-rating">
-                <svg-icon src="../../assets/Icons/rating.svg" [svgStyle]="{ 'width.px':96,'height.px':18 }"></svg-icon>
+            <div class="job__rating">
+                <svg-icon src="/assets/Icons/rating.svg" [svgStyle]="{ 'width.px': 96, 'height.px': 18 }"></svg-icon>
             </div>
-            <div class="job-select">
-                    <svg-icon src="../../assets/Icons/save.svg" [svgStyle]="{ 'width.px':16,'height.px':20 }">
+            <div class="job__select">
+                <button class="job__save" (click)="saveJob($event, 1)">
+                    <svg-icon src="/assets/Icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
                     </svg-icon>
-                <div class="job-post">
-                    <p> posted: {{data.createdAt | date: 'dd.MM.yyyy' }}</p>
+                </button>
+                <div class="job__post">
+                    <p>posted: {{ data.createdAt | date: "dd.MM.yyyy" }}</p>
                 </div>
             </div>
         </div>
