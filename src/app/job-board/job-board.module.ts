@@ -5,9 +5,11 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { COMPONENTS } from './components';
 import { JobBoardRoutingModule } from './job-board-routing.module';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { DateAgoPipe } from '../pipes/date-ago.pipe';
+
 
 @NgModule({
-  declarations: [COMPONENTS],
-  imports: [CommonModule, JobBoardRoutingModule, AngularSvgIconModule,PaginationModule.forRoot()],
+  declarations: [COMPONENTS, DateAgoPipe],
+  imports: [CommonModule, JobBoardRoutingModule, AngularSvgIconModule,PaginationModule.forRoot()] 
 })
 export class JobBoardModule {}

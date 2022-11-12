@@ -13,7 +13,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,6 +22,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
     FormsModule,
     AngularSvgIconModule.forRoot(),
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [ ]
 })
 export class AppModule { }

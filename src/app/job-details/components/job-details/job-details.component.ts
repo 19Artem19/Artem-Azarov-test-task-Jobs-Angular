@@ -23,4 +23,9 @@ export class JobDetailsComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  saveJob(event: MouseEvent, id: number) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
 }

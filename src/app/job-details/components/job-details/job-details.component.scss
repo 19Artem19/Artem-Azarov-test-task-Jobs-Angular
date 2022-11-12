@@ -1,18 +1,3 @@
-@font-face {
-    font-family: "ProximaNova-Regular";
-    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Regular.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "ProximaNova-Bold";
-    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Bold.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "ProximaNova-Semibold";
-    src: local("Proxima"), url(../../../../assets/fonts/ProximaNova-Semibold.ttf) format("truetype");
-}
-
 *p,
 li {
     color: #3A4562;
@@ -56,7 +41,7 @@ li {
 .details__share {
     display: flex;
     width: 723px;
-    height: 44px;
+    // height: 44px;
     border-bottom: 1px solid rgba(58, 69, 98, 0.13); //?сделал прозрачность бордера так, возможно не верно
     flex-direction: row;
     align-items: center;
@@ -168,7 +153,7 @@ li {
         line-height: 16px;
         border: 1px solid rgba(85, 105, 158, 0.3); //!
         margin: 10px 8px 0 0;
-        cursor: pointer;
+
     }
 
 }
@@ -191,7 +176,7 @@ li {
         line-height: 16px;
         border: 1px solid #FFCF00; //!
         margin: 10px 8px 0 0;
-        cursor: pointer;
+
     }
 }
 
@@ -199,38 +184,41 @@ li {
 
 .addiditional {
     width: 723px;
-    height: 44px;
+    // height: 44px;
     border-bottom: 1px solid rgba(58, 69, 98, 0.13)
 }
 
 .attached {
     margin-top: 87px;
     width: 723px;
-    height: 44px;
+    // height: 44px;
     border-bottom: 1px solid rgba(58, 69, 98, 0.13)
 }
 
-.return__board {
-    width: 213px;
-    height: 50px;
-    background: rgba(56, 69, 100, 0.14); //!
-    border-radius: 8px;
-    font-size: 12px;
-    line-height: 16px;
-    border: none;
-    cursor: pointer;
-    color: #3A4562;
+.return {
+    margin-top: 89px;
+
+    .return__board {
+        width: 213px;
+        height: 50px;
+        background: rgba(56, 69, 100, 0.14); //!
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 16px;
+        border: none;
+        cursor: pointer;
+        color: #3A4562;
 
 
 
-    &::before {
-        content: url('/assets/Icons/arrow-back.svg'); //? не могу выровнять!!!
-        // padding: 16px 19px 16px 23px;
-        display: inline-block;
-        vertical-align: middle;
+        &::before {
+            content: url('/assets/Icons/arrow-back.svg'); //? не могу выровнять!!!
+            // padding: 16px 19px 16px 23px;
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
 }
-
 
 .contact {
     width: 402px;
@@ -257,6 +245,21 @@ li {
 
         p {
             color: red;
+        }
+    }
+}
+
+.picture {
+    display: flex;
+    flex-direction: row;
+
+    .picture__job {
+        margin: 21px 10px 0 0;
+
+        img {
+            border-radius: 8px;
+            width: 209px;
+            height: 115px;
         }
     }
 }

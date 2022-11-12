@@ -1,5 +1,5 @@
 <div class="job-wrapper">
-    <div class="job" *ngFor="let data of jobs" [routerLink]="['/details', data.id]">
+    <div class="job" *ngFor="let data of returnedArray" [routerLink]="['/details', data.id]">
         <div class="job__image">
             <img [src]="data.pictures[0]" />
         </div>
@@ -22,9 +22,12 @@
                     </svg-icon>
                 </button>
                 <div class="job__post">
-                    <p>posted: {{ data.createdAt | date: "dd.MM.yyyy" }}</p>
+                    <p>Posted {{ data.createdAt | dateAgo }}</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="some">
+        <pagination [totalItems]="jobs.length" (pageChanged)="pageChanged($event)" [itemsPerPage]="15"></pagination>
     </div>
 </div>

@@ -4,13 +4,17 @@
             <h2>Job Details</h2>
             <div class="details__target">
                 <div class="details__save">
-                    <svg-icon src="../../assets/Icons/save.svg" [svgStyle]="{ 'width.px':16,'height.px':20 }">
-                    </svg-icon>
+                    <button class="details__save--button" (click)="saveJob($event, 1)">
+                        <svg-icon src="/assets/Icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
+                        </svg-icon>
+                    </button>
                     <p>Save to my list</p>
                 </div>
                 <div class="details__divide">
-                    <svg-icon src="../../assets/Icons/share.svg" [svgStyle]="{ 'width.px':18,'height.px':20 }">
-                    </svg-icon>
+                    <button class="details__divide--button" (click)="saveJob($event, 1)">
+                        <svg-icon src="/assets/Icons/share.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
+                        </svg-icon>
+                    </button>
                     <p>Share</p>
                 </div>
             </div>
@@ -27,7 +31,7 @@
 
         </div>
         <div class="title__post">
-            <p>{{job?.createdAt}}</p>
+            <p>{{job?.createdAt| date}}</p>
         </div>
         <div class="description">
             <div class="description__job">
@@ -68,10 +72,13 @@
         </div>
         <div class="attached">
             <h2>Attahced images</h2>
-            <ng-container *ngFor="let image of job?.pictures|keyvalue">
-                <img [src]="image.value">
-            </ng-container>
         </div>
+        <div class="picture">
+            <div class="picture__job" *ngFor="let image of job?.pictures|keyvalue">
+                <img [src]="image.value">
+            </div>
+        </div>
+
         <div class="return">
             <button class="return__board" [routerLink]="['/']">
                 RETURN TO A JOB BOARD
@@ -87,5 +94,3 @@
         <div class="contact__map"></div>
     </div>
 </div>
-
-
