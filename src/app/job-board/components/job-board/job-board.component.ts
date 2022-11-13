@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { JobsService, Job } from '../../../services';
 import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 @Component({
   selector: 'app-job-board',
   templateUrl: './job-board.component.html',
-  styleUrls: ['./job-board.component.scss']
+  styleUrls: ['./job-board.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 
@@ -12,7 +13,7 @@ export class JobBoardComponent implements OnInit {
 
   jobs: Job[] = [];
   currentPage = 1;
-  itemsPerPage = 10;
+  itemsPerPage = 5;
   returnedArray: Job[] = [];
 
   constructor(private jobsService: JobsService) { }
@@ -20,13 +21,9 @@ export class JobBoardComponent implements OnInit {
   ngOnInit(): void {
     this.jobsService.getJobs().subscribe((jobs) => {
       this.jobs = jobs;
-      const length = this.jobs.length
       console.log('jobs', this.jobs);
-      console.log('length', length);
-      this.returnedArray = this.jobs.slice(0, 10);
+      this.returnedArray = this.jobs.slice(0, 5);
       console.log('returnedArray', this.returnedArray);
-
-
     });
 
 
