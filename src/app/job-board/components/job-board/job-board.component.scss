@@ -1,152 +1,147 @@
-* p {
-    font-size: 16px;
-    line-height: 25px;
-    color: #878D9D;
-    font-family: "ProximaNova-Regular";
-
-}
-
-h2 {
-    font-size: 20px;
-    line-height: 25px;
-    font-family: "ProximaNova-Bold", sans-serif;
-}
-
 .job-wrapper {
     width: 1400px;
-    left: 260px;
-    top: 29px;
-    position: absolute;
-
-    .job {
-        display: flex;
-        flex-direction: row;
-        width: 1400px;
-        margin-bottom: 10px;
-        padding: 24px 16px;
-        background-color: #FFFFFF;
-        box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
-            0px 2px 1px -1px rgba(0, 0, 0, 0.04),
-            0px 1px 3px rgba(0, 0, 0, 0.12);
-        border-radius: 8px;
-        cursor: pointer;
-
-        .job__image {
-            width: 85px;
-            height: 85px;
-
-            img {
-                width: inherit;
-                height: inherit;
-                border-radius: 50%;
-            }
-        }
-    }
-
-
+    margin: 0 auto;
+    padding: 29px 0 15px;
 }
 
-.job__description {
+.job {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 26px;
+    margin-bottom: 8px;
+    padding: 24px 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
+        0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
 
-    .job__title {
-        width: 959px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #878d9d;
+    font-family: "ProximaNova-Regular";
 
-        .job__address {
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__image-container {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        .job__image {
+            width: inherit;
+            height: inherit;
+            object-fit: fill;
+        }
+    }
+
+    &__content {
+        display: flex;
+        padding-left: 26px;
+        width: 100%;
+    }
+
+    &__description {
+        width: 100%;
+    }
+
+    &__info {
+        display: flex;
+        flex-shrink: 0;
+    }
+
+    &__title {
+        font-size: 20px;
+        line-height: 25px;
+        font-family: "ProximaNova-Bold", sans-serif;
+        color: #3a4562;
+    }
+
+    &__location {
+        display: flex;
+        align-items: center;
+
+        &-marker {
             display: flex;
-
-            p {
-                margin-left: 8px;
-            }
         }
 
-        h2 {
-            color: #3A4562;
+        &-address {
+            margin-left: 8px;
         }
     }
 
-    .job__rating {
-        margin-left: 26px;
+    &__rating {
+        display: flex;
+        align-items: center;
+        min-width: 96px;
     }
 
-
-    .job__select {
+    &__select {
         margin-left: 32px;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-
-        .job__post {
-            margin-top: 70px;
-        }
-
+        justify-content: space-between;
     }
 }
 
-.list {
+.pagination-container {
     display: flex;
     justify-content: center;
+    margin: 49px 0;
+}
 
-    .pagination {
-        display: flex;
-        justify-content: center;
-        width: 515px;
-        padding: 15px 10px 15px 10px;
-        border-radius: 10px;
-        background: #FFFFFF;
-        box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
-            0px 2px 1px -1px rgba(0, 0, 0, 0.04),
-            0px 1px 3px rgba(0, 0, 0, 0.12);
+@media(max-width:767px) {
+    .job-wrapper {
+        background-color: #EFF0F5;
+        padding: 9px 9x 9px 0;
+    }
 
-        li {
-            margin-right: 25px;
+    .job {
+        max-width: 396px;
+        background-color: #EFF0F5;
 
-
-
-            &:first-child {
-                border-right: 1.3px solid #DEE3EF;
-                padding-right: 31px;
-
-                &::before {
-                    display: inline-block;
-                    content: '❯';
-                    width: 18px;
-                    height: 18px;
-                    color: #7D859C;
-                    transform: rotate(180deg);
-                }
-            }
-
-            &:last-child {
-                border-left: 1.3px solid #DEE3EF;
-                padding-left: 31px;
-
-                &::after {
-                    display: inline-block;
-                    content: '❯';
-                    width: 18px;
-                    height: 18px;
-                    color: #7D859C;
-                }
-            }
+        &__image-container {
+            width: 66px;
+            height: 66px;
+            margin-top: 25px;
         }
 
-        li a {
-            text-decoration: none;
-            color: #3A4562;
-            font-size: 21px;
-            line-height: 25px;
-            font-family: "ProximaNova-Bold";
-
-            &:active {
-                border-bottom: 2.6px solid #5876C5;
-                color: #5876C5;
-            }
-
+        &__title {
+            font-family: "ProximaNova-Regular";
         }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            padding-left: 19px;
+        }
+
+        &__save {
+            display: none;
+        }
+
+        &__info {
+            order: -1;
+        }
+
+        &__rating {
+            min-width: 54px;
+        }
+
 
     }
+
+    .pagination-container {
+
+        display: flex;
+        justify-content: center;
+        max-width: 396px;
+
+        .pagination {
+            display: flex;
+            max-width: 396px;
+        }
+    }
+
 }

@@ -16,3 +16,40 @@
     font-family: "ProximaNova-Semibold";
     src: local("Proxima"), url(./assets/fonts/ProximaNova-Semibold.ttf) format("truetype");
 }
+
+
+.pagination {
+    display: flex;
+    justify-content: space-evenly;
+    width: 515px;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
+        0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    li {
+        &:first-child {
+            border-right: 1.3px solid #dee3ef;
+            padding-right: 31px;
+        }
+
+        &:last-child {
+            border-left: 1.3px solid #dee3ef;
+            padding-left: 31px;
+        }
+    }
+
+    li a {
+        text-decoration: none;
+        color: #3a4562;
+        font-size: 21px;
+        line-height: 25px;
+        font-family: "ProximaNova-Bold";
+
+        &:active {
+            border-bottom: 2.6px solid #5876c5;
+            color: #5876c5;
+        }
+    }
+}

@@ -17,7 +17,6 @@ export class JobDetailsComponent implements OnInit {
       .pipe(switchMap((params) => this.jobsService.getJobById(params['id'])))
       .subscribe((job) => {
         this.job = job;
-        console.log('job', this.job);
       });
   }
 

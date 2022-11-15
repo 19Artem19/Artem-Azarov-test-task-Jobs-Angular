@@ -4,10 +4,10 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { COMPONENTS } from './components';
 import { JobDetailsRoutingModule } from './job-details-routing.module';
-// import { DateAgoPipe } from '../pipes/date-ago.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [...COMPONENTS,],
-  imports: [CommonModule, JobDetailsRoutingModule, AngularSvgIconModule],
+  imports: [CommonModule, JobDetailsRoutingModule, AngularSvgIconModule,SharedModule]
 })
 export class JobDetailsModule {}

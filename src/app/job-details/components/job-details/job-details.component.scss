@@ -31,235 +31,304 @@ li {
 
 .details {
     display: flex;
+    margin: 56px 19px 19px 348px;
+    width: 1920px;
+    margin: 0 auto; //!!!
 
-    .details__job {
+    &__job {
         width: 774px;
-        margin-left: 347px;
     }
-}
 
-.details__share {
-    display: flex;
-    width: 723px;
-    // height: 44px;
-    border-bottom: 1px solid rgba(58, 69, 98, 0.13); //?сделал прозрачность бордера так, возможно не верно
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
 
-    .details__target {
-        //? лучше ничего не придумал, хотя ты забракуешь полюбому))
+    &__share {
         display: flex;
+        border-bottom: 1px solid rgba(58, 69, 98, 0.13); //?сделал прозрачность бордера так, возможно не верно
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 39px;
 
-        .details__save {
-            display: flex;
-            margin-right: 30px;
 
-            p {
-                padding-left: 15px;
-            }
-        }
-
-        .details__divide {
-            display: flex;
-
-            p {
-                padding-left: 15px;
-            }
-        }
     }
-}
 
+    &__target {
+        display: flex;
+    }
 
-
-.title {
-    display: flex;
-    justify-content: space-between;
-    width: 723px;
-    padding-top: 32px;
-
-
-    .title__job {
-        width: 501px;
+    &__save {
+        display: flex;
+        margin-right: 30px;
 
         p {
-            font-size: 24px;
-            line-height: 30px;
+            padding-left: 15px;
+        }
+    }
+
+    &__divide {
+        display: flex;
+
+        p {
+            padding-left: 15px;
+        }
+    }
+
+
+
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+
+
+        &__job {
+            width: 501px;
+
+            p {
+                font-size: 24px;
+                line-height: 30px;
+                font-family: "ProximaNova-Bold";
+            }
+        }
+    }
+
+    .title__post {
+        margin-top: 7px;
+
+        p {
+            color: #878D9D;
+            opacity: 0.4;
+        }
+    }
+
+
+    .description {
+        max-width: 721px;
+    }
+
+    .addiditional {
+        margin-top: 87px;
+    }
+
+    .job-attached-info {
+        margin-top: 87px;
+    }
+
+    .type {
+        display: flex;
+
+        &__options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 222px;
+            height: 49px;
+            background: rgba(161, 177, 219, 0.317343); //!
+            border-radius: 8px;
+            color: #55699E;
+            font-size: 16px;
+            line-height: 16px;
+            border: 1px solid rgba(85, 105, 158, 0.3); //!
+            margin: 10px 8px 23px 0;
+            font-family: "ProximaNova-Bold";
+        }
+
+    }
+
+    .benefits {
+        display: flex;
+
+        &__options {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 222px;
+            height: 49px;
+            background: rgba(255, 207, 0, 0.15); //!
+            border-radius: 8px;
+            color: #988B49;
+            font-size: 16px;
+            line-height: 16px;
+            border: 1px solid #FFCF00; //!
+            margin: 10px 8px 0 0;
             font-family: "ProximaNova-Bold";
         }
     }
-}
-
-.title__post {
-    p {
-        color: #878D9D;
-        opacity: 0.4;
-        // color: rgba(56, 65, 93, 0.355988);
-    }
-}
 
 
-.description {
-    width: 721px;
 
-    .description__responsibilities {
-        margin-top: 20px;
+    .addiditional {
+        width: 723px;
+        border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+        margin-bottom: 15px;
+
     }
 
-    .description__compensation {
-        margin-top: 20px;
+    .attached {
+        margin-top: 87px;
+        width: 723px;
+        border-bottom: 1px solid rgba(58, 69, 98, 0.13)
+    }
 
-        .description__compensation--list li {
-            list-style: none;
+    .return-container {
+        margin-top: 89px;
+        margin-bottom: 162px;
+
+        &__board {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 213px;
+            height: 50px;
+            background: rgba(56, 69, 100, 0.14); //!
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 16px;
+            font-family: "ProximaNova-Semibold";
+            border: none;
+            cursor: pointer;
+            color: #3A4562;
+
 
             &::before {
-                content: url('/assets/Icons/square.svg');
-                //?position relative для вынесения за пределы блока
+                content: url('/assets/icons/arrow-back.svg'); //? не могу выровнять!!!
+                display: inline-block;
+                vertical-align: middle;
             }
-
-            &:last-child {
-                margin-bottom: 20px; //? не смогу высчитать расстояние
-            }
-
-        }
-
-    }
-}
-
-.addiditional {
-    margin-top: 87px;
-}
-
-.job-attached-info {
-    margin-top: 87px;
-}
-
-.type {
-    display: flex;
-
-    .type__options {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 222px;
-        height: 49px;
-        background: rgba(161, 177, 219, 0.317343); //!
-        // background: #a1b1db;
-        // opacity: 0.3;
-        border-radius: 8px;
-        color: #55699E;
-        font-size: 16px;
-        line-height: 16px;
-        border: 1px solid rgba(85, 105, 158, 0.3); //!
-        margin: 10px 8px 0 0;
-
-    }
-
-}
-
-.benefits {
-    display: flex;
-
-    .benefits__options {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 222px;
-        height: 49px;
-        background: rgba(255, 207, 0, 0.15); //!
-        // background: #a1b1db;
-        // opacity: 0.3;
-        border-radius: 8px;
-        color: #988B49;
-        font-size: 16px;
-        line-height: 16px;
-        border: 1px solid #FFCF00; //!
-        margin: 10px 8px 0 0;
-
-    }
-}
-
-
-
-.addiditional {
-    width: 723px;
-    // height: 44px;
-    border-bottom: 1px solid rgba(58, 69, 98, 0.13)
-}
-
-.attached {
-    margin-top: 87px;
-    width: 723px;
-    // height: 44px;
-    border-bottom: 1px solid rgba(58, 69, 98, 0.13)
-}
-
-.return {
-    margin-top: 89px;
-
-    .return__board {
-        width: 213px;
-        height: 50px;
-        background: rgba(56, 69, 100, 0.14); //!
-        border-radius: 8px;
-        font-size: 12px;
-        line-height: 16px;
-        border: none;
-        cursor: pointer;
-        color: #3A4562;
-
-
-
-        &::before {
-            content: url('/assets/Icons/arrow-back.svg'); //? не могу выровнять!!!
-            // padding: 16px 19px 16px 23px;
-            display: inline-block;
-            vertical-align: middle;
         }
     }
-}
 
-.contact {
-    width: 402px;
-    height: 436px;
-    border: 1px solid blue;
-    margin-left: 134px;
-    // display: flex;
-    // flex-direction: column;
-    // flex-grow: 2;
 
-    .contact__job {
-        border-bottom: 1px solid red;
-        height: 50%; //!
-        background-color: #2A3047;
-        position: relative;
-        z-index: 1;
 
-        .contact__info {
+    .picture {
+        display: flex;
+        flex-direction: row;
+
+        &__job {
+            margin: 21px 10px 0 0;
+
+            &-image {
+                border-radius: 8px;
+                width: 209px;
+                height: 115px;
+            }
+        }
+    }
+
+    .contact-header {
+        margin-top: 63px;
+        border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+        display: none;
+    }
+
+    .contact {
+        width: 402px;
+        height: 436px;
+        border: 1px solid blue;
+        margin-left: 134px;
+
+        &__job {
+            height: 50%; //!
+            background-color: #2A3047;
+        }
+
+        &__info-wrapper {
             width: 50%;
             height: 100%;
             border-radius: 0 112px 111px 0;
             background-color: #202336;
+
+
         }
 
-        p {
-            color: red;
+        &__info {
+            position: absolute;
+            margin: 25px 0 0 62px;
+            z-index: 1;
+
+            h3 {
+                color: #E7EAF0;
+            }
         }
+
+        &__info-name {
+            color: #E7EAF0;
+            font-family: "ProximaNova-Bold", sans-serif;
+            font-size: 20px;
+            line-height: 25px;
+
+        }
+
+        &__info-address,
+        &__info-phone-email,
+        &__info-email {
+            font-size: 18px;
+            line-height: 24px;
+            font-family: 'Roboto';
+            color: #E8EBF3;
+            margin-top: 8px;
+        }
+
     }
+
+
 }
 
-.picture {
-    display: flex;
-    flex-direction: row;
 
-    .picture__job {
-        margin: 21px 10px 0 0;
 
-        img {
-            border-radius: 8px;
-            width: 209px;
-            height: 115px;
+
+@media (max-width:762px) {
+    .details {
+        max-width: 414px;
+        display: flex;
+        flex-direction: column;
+
+        &__job {
+            max-width: 414px;
+            display: flex;
+            flex-direction: column;
         }
+
+        .type__options {
+            width: 122px;
+            height: 50px;
+        }
+
+        .benefits__options {
+            width: 122px;
+            height: 50px;
+        }
+
+        .return-container {
+            display: none;
+        }
+
+        .apply__first-button {
+            display: none;
+        }
+
+        .apply__second-button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .contact-header {
+            display: flex;
+        }
+
+        .addiditional,
+        .contact-header {
+            max-width: 414px;
+        }
+
+        .attached {
+            max-width: 310px;
+        }
+
+        .contact {
+            max-width: 372px;
+            margin: 0 auto;
+        }
+
     }
 }
