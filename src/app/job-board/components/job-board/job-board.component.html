@@ -1,60 +1,67 @@
-<div class="job-wrapper">
-  <div class="job" *ngFor="let data of jobsOnView; index as i" [routerLink]="['/details', data.id]">
-    <div class="job__image-container">
-      <img class="job__image" [src]="data.pictures[0] + '?q=' + i + '-' + currentPage" />
-    </div>
-
-    <div class="job__content">
-      <div class="job__description">
-        <h2 class="job__title">{{ data.title }}</h2>
-        <p class="job__department">Department Name * {{ data.name }}</p>
-        <div class="job__location">
-          <svg-icon class="job__location-marker" src="/assets/icons/location-marker.svg"
-            [svgStyle]="{ 'width.px': 13, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-          <p class="job__location-address">{{ data.address }}</p>
-        </div>
+<div class="wrapper-container">
+  <div class="job-wrapper">
+    <div class="job" *ngFor="let data of jobsOnView; index as i" [routerLink]="['/details', data.id]">
+      <div class="job__image-container">
+        <img class="job__image" [src]="data.pictures[0] + '?q=' + i + '-' + currentPage" />
       </div>
 
-      <div class="job__info">
-        <div class="job__rating">
-          <svg-icon class="job__rating-marker" src="/assets/icons/rating.svg" [svgStyle]="{ 'width.px': 96, 'height.px': 18 }"></svg-icon>
+      <div class="job__content">
+        <div class="job__description">
+          <h2 class="job__title">{{ data.title }}</h2>
+          <p class="job__department">Department Name * {{ data.name }}</p>
+          <div class="job__location">
+            <svg-icon class="job__location-marker" src="/assets/icons/location-marker.svg"
+              [svgStyle]="{ 'width.px': 13, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
+            <p class="job__location-address">{{ data.address }}</p>
+          </div>
         </div>
-        <div class="job__select">
-          <button class="job__save" (click)="saveJob($event, 1)">
-            <svg-icon src="/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
-            </svg-icon>
-          </button>
-          <div class="job__post">
-            <p>Posted {{ data.createdAt | dateAgo }}</p>
+
+        <div class="job__info">
+          <div class="job__rating">
+            <svg-icon class="job__rating-marker-mobile" src="/assets/icons/rating.svg"
+              *ngFor="let rating of data.rating | keyvalue" [svgStyle]="{ 'width.px': 10, 'height.px': 10 } ">
+              {{rating.value}}</svg-icon>
+            <svg-icon class="job__rating-marker" src="/assets/icons/rating.svg"
+              *ngFor="let rating of data.rating | keyvalue" [svgStyle]="{ 'width.px': 19, 'height.px': 18 } ">
+              {{rating.value}}</svg-icon>
+          </div>
+          <div class="job__select">
+            <button class="job__save" (click)="saveJob($event, 1)">
+              <svg-icon src="/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
+              </svg-icon>
+            </button>
+            <div class="job__post">
+              <p>Posted {{ data.createdAt | dateAgo }}</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="pagination-container">
+      <pagination class="pagination-items" [totalItems]="jobs.length" (pageChanged)="pageChanged($event)"
+        [itemsPerPage]="5" [customPreviousTemplate]="prevTemplate" [customNextTemplate]="nextTemplate"></pagination>
+    </div>
   </div>
-  <div class="pagination-container">
-    <pagination [totalItems]="jobs.length" (pageChanged)="pageChanged($event)" [itemsPerPage]="5"
-      [customPreviousTemplate]="prevTemplate" [customNextTemplate]="nextTemplate"></pagination>
-  </div>
+
+  <ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
+    <ng-container *ngIf="!disabled">
+      <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
+        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
+    </ng-container>
+    <ng-container *ngIf="disabled">
+      <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
+        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
+    </ng-container>
+  </ng-template>
+
+  <ng-template #prevTemplate let-disabled="disabled" let-currentPage="currentPage">
+    <ng-container *ngIf="!disabled">
+      <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
+        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
+    </ng-container>
+    <ng-container *ngIf="disabled">
+      <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
+        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
+    </ng-container>
+  </ng-template>
 </div>
-
-<ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
-  <ng-container *ngIf="!disabled">
-    <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
-      [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-  </ng-container>
-  <ng-container *ngIf="disabled">
-    <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
-      [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-  </ng-container>
-</ng-template>
-
-<ng-template #prevTemplate let-disabled="disabled" let-currentPage="currentPage">
-  <ng-container *ngIf="!disabled">
-    <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
-      [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-  </ng-container>
-  <ng-container *ngIf="disabled">
-    <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
-      [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-  </ng-container>
-</ng-template>

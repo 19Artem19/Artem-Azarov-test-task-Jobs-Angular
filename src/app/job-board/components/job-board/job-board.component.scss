@@ -1,7 +1,11 @@
 .job-wrapper {
-    width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 29px 0 15px;
+    padding: 29px 9px 15px 9px;
+}
+
+.wrapper-container {
+    background-color: #EFF0F5;
 }
 
 .job {
@@ -24,14 +28,13 @@
 
     &__image-container {
         width: 85px;
-        height: 85px;
-        border-radius: 50%;
-        overflow: hidden;
 
         .job__image {
-            width: inherit;
-            height: inherit;
             object-fit: fill;
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            max-width: none;
         }
     }
 
@@ -74,6 +77,12 @@
         display: flex;
         align-items: center;
         min-width: 96px;
+
+
+    }
+
+    &__rating-marker-mobile {
+        display: none;
     }
 
     &__select {
@@ -88,23 +97,32 @@
 .pagination-container {
     display: flex;
     justify-content: center;
-    margin: 49px 0;
+    margin: 49px auto;
+    max-width: 515px;
 }
 
 @media(max-width:767px) {
     .job-wrapper {
         background-color: #EFF0F5;
-        padding: 9px 9x 9px 0;
+        margin: 9px 9x 9px 26px;
     }
 
     .job {
-        max-width: 396px;
         background-color: #EFF0F5;
+        width: 100%;
+        padding: 13px 16px;
 
         &__image-container {
             width: 66px;
-            height: 66px;
-            margin-top: 25px;
+            padding-top: 30px;
+
+            .job__image {
+                object-fit: fill;
+                width: 66px;
+                height: 66px;
+                border-radius: 50%;
+                max-width: none;
+            }
         }
 
         &__title {
@@ -129,18 +147,34 @@
             min-width: 54px;
         }
 
+        &__rating-marker {
+            display: none;
+        }
+
+        &__rating-marker-mobile {
+            display: block;
+        }
+
+        &__info {
+            display: flex;
+            justify-content: space-between;
+        }
+
 
     }
 
     .pagination-container {
-
         display: flex;
         justify-content: center;
-        max-width: 396px;
+        margin: 26px auto;
+
+
+        .pagination-items {
+            width: 100%;
+        }
 
         .pagination {
-            display: flex;
-            max-width: 396px;
+            width: 100%;
         }
     }
 

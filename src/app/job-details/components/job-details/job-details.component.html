@@ -9,6 +9,11 @@
                             <svg-icon src="/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
                             </svg-icon>
                         </button>
+                        <button class="details__save--button-mobile" (click)="saveJob($event, 1)">
+                            <svg-icon src="/assets/icons/save-star.svg"
+                                [svgStyle]="{ 'width.px': 21, 'height.px': 20 }">
+                            </svg-icon>
+                        </button>
                         <p>Save to my list</p>
                     </div>
                     <div class="details__divide">
@@ -23,14 +28,19 @@
             <app-apply-job class="apply__first-button"></app-apply-job>
             <div class="title">
                 <div class="title__job">
-                    <p>{{ job.title }}</p>
+                    <p class="title__job-description">{{ job.title }}</p>
                 </div>
                 <div class="title__salary">
-                    <h3>{{ job.salary }}</h3>
-                    <p>Brutto, per year</p>
+                    <div class="title__post-mobile">
+                        <p>{{ job.createdAt | dateAgo }}</p>
+                    </div>
+                    <div class="title__salary-total">
+                        <h3 class="title__salary-brutto">{{ job.salary }}</h3>
+                        <p>Brutto, per year</p>
+                    </div>
                 </div>
             </div>
-            <div class="title__post">
+            <div class="title-post">
                 <p>{{ job.createdAt | dateAgo }}</p>
             </div>
             <div class="description">
@@ -39,32 +49,35 @@
                 </div>
             </div>
             <app-apply-job class="apply__second-button"></app-apply-job>
-            <div class="addiditional">
-                <h2>Addiditional Info</h2>
-            </div>
-            <h4>Employment Type</h4>
-            <div class="type">
-                <ng-container *ngFor="let type of job.employment_type | keyvalue">
-                    <span class="type__options">{{ type.value }}</span>
-                </ng-container>
-            </div>
-            <h4>Benefits</h4>
-            <div class="benefits">
-                <ng-container *ngFor="let benefit of job.benefits | keyvalue">
-                    <span class="benefits__options">{{ benefit.value }}</span>
-                </ng-container>
-            </div>
-            <div class="attached">
-                <h2>Attahced images</h2>
-            </div>
-            <div class="picture">
-                <div class="picture__job" *ngFor="let image of job.pictures; index as i">
-                    <img class="picture__job-image" [src]="image + '?q=' + i" />
+            <div class="addiditional-wrapper">
+                <div class="addiditional-container">
+                    <div class="addiditional">
+                        <h2>Addiditional Info</h2>
+                    </div>
+                    <h4>Employment Type</h4>
+                    <div class="type">
+                        <ng-container *ngFor="let type of job.employment_type | keyvalue">
+                            <span class="type__options">{{ type.value }}</span>
+                        </ng-container>
+                    </div>
+                    <h4>Benefits</h4>
+                    <div class="benefits">
+                        <ng-container *ngFor="let benefit of job.benefits | keyvalue">
+                            <span class="benefits__options">{{ benefit.value }}</span>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="attached-container">
+                        <h2>Attahced images</h2>
+                    <div class="picture">
+                        <div class="picture__job" *ngFor="let image of job.pictures; index as i">
+                            <img class="picture__job-image" [src]="image + '?q=' + i" />
+                        </div>
+                    </div>
                 </div>
             </div>
-
             <div class="return-container">
-                <button class="return__board" routerLink="/">
+                <button class="return-container__button" routerLink="/">
                     RETURN TO A JOB BOARD
                 </button>
             </div>

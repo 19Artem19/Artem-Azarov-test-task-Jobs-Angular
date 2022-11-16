@@ -9,6 +9,7 @@ export const jobs: Job[] = [{
         'Ut veniam occaecat aute adipisicing eiusmod non pariatur enim enim cupidatat nulla ipsum eiusmod.',
     salary: '60k-71k',
     address: '76 Blende Jardine Place',
+    rating:['1','2','3','4','5'],
     benefits: ['Pay vocations', 'Flexible hours'],
     location: {
         lat: 9.804124,
@@ -33,6 +34,7 @@ export const jobs: Job[] = [{
     title: 'Tempor voluptate et quis aute et labore amet qui reprehenderit do eu amet tempor.',
     salary: '63k-90k',
     address: '21 Farmington Gold Street',
+    rating:['1','2','3'],
     benefits: ['Pay vocations'],
     location: {
         lat: 10.714357,
@@ -57,6 +59,7 @@ export const jobs: Job[] = [{
     title: 'Magna quis proident do ullamco cillum veniam reprehenderit sunt commodo aute elit.',
     salary: '61k-99k',
     address: '26 Zortman Thomas Street',
+    rating:['1','2','3','4','5'],
     benefits: ['Flexible hours', 'Relocation'],
     location: {
         lat: 17.761356,
@@ -82,6 +85,7 @@ export const jobs: Job[] = [{
         'Ex culpa fugiat sit aliqua in nulla occaecat ex culpa quis adipisicing consequat proident cupidatat.',
     salary: '61k-75k',
     address: '9 Shindler Junius Street',
+    rating:['1','2'],
     benefits: ['Relocation', 'Pay vocations'],
     location: {
         lat: 87.010345,
@@ -106,6 +110,7 @@ export const jobs: Job[] = [{
     title: 'Eu pariatur duis elit duis minim ipsum ex.',
     salary: '62k-76k',
     address: '32 Oberlin Bartlett Street',
+    rating:['1','2','3','4','5'],
     benefits: ['Relocation', 'Flexible hours'],
     location: {
         lat: -69.594576,
@@ -131,6 +136,7 @@ export const jobs: Job[] = [{
         'Commodo eiusmod laborum eiusmod quis laboris officia labore qui labore laborum dolor Lorem cillum.',
     salary: '68k-96k',
     address: '78 Kenvil Fleet Walk',
+    rating:['1','2','3'],
     benefits: ['Flexible hours', 'Pay vocations'],
     location: {
         lat: -26.927111,
@@ -155,6 +161,7 @@ export const jobs: Job[] = [{
     title: 'Non sit officia dolor magna.',
     salary: '68k-82k',
     address: '86 Mapletown Hart Street',
+    rating:['1','2','3','4','5'],
     benefits: ['Relocation'],
     location: {
         lat: -4.145098,
@@ -179,6 +186,7 @@ export const jobs: Job[] = [{
     title: 'Consequat nostrud anim ut nisi tempor sint.',
     salary: '65k-90k',
     address: '60 Galesville Glen Street',
+    rating:['1'],
     benefits: ['Pay vocations', 'Flexible hours'],
     location: {
         lat: 50.701666,
@@ -203,6 +211,7 @@ export const jobs: Job[] = [{
     title: 'Commodo elit mollit aute commodo.',
     salary: '67k-80k',
     address: '95 Babb Hyman Court',
+    rating:['1','2','3','4','5'],
     benefits: ['Relocation', 'Pay vocations'],
     location: {
         lat: -82.313128,
@@ -227,6 +236,7 @@ export const jobs: Job[] = [{
     title: 'Eu officia dolor id dolor non enim sunt.',
     salary: '69k-75k',
     address: '36 Nile Denton Place',
+    rating:['1','2','3','4'],
     benefits: ['Flexible hours', 'Pay vocations'],
     location: {
         lat: 41.573242,
@@ -252,6 +262,7 @@ export const jobs: Job[] = [{
         'Qui incididunt aliquip commodo mollit veniam aute adipisicing adipisicing sit laborum do.',
     salary: '60k-91k',
     address: '92 Otranto Kiely Place',
+    rating:['1','2','3','4','5'],
     benefits: ['Pay vocations'],
     location: {
         lat: -49.454365,
@@ -276,6 +287,7 @@ export const jobs: Job[] = [{
     title: 'Nulla excepteur tempor mollit officia nisi do sint culpa.',
     salary: '63k-91k',
     address: '60 Escondida Dahlgreen Place',
+    rating:['1','2'],
     benefits: ['Pay vocations'],
     location: {
         lat: 14.977428,
@@ -300,6 +312,7 @@ export const jobs: Job[] = [{
     title: 'Reprehenderit ea ea est est proident.',
     salary: '62k-71k',
     address: '30 Emory Montauk Avenue',
+    rating:['1','2','3'],
     benefits: ['Flexible hours', 'Relocation'],
     location: {
         lat: -22.463644,
@@ -325,6 +338,7 @@ export const jobs: Job[] = [{
         'Occaecat exercitation ex adipisicing deserunt aliqua nostrud reprehenderit consequat veniam consectetur adipisicing.',
     salary: '60k-91k',
     address: '61 Nelson Lafayette Walk',
+    rating:['1','2','3','4'],
     benefits: ['Relocation', 'Flexible hours'],
     location: {
         lat: -2.023043,
@@ -349,6 +363,7 @@ export const jobs: Job[] = [{
     title: 'Non consectetur cillum consequat nostrud id consectetur dolor irure consequat mollit.',
     salary: '67k-94k',
     address: '76 Suitland Commercial Street',
+    rating:['1','2','3','4'],
     benefits: ['Pay vocations', 'Relocation'],
     location: {
         lat: 20.754524,
@@ -373,6 +388,7 @@ export const jobs: Job[] = [{
     title: 'Sunt elit cillum ad sint nulla et culpa sunt eu exercitation in officia ipsum.',
     salary: '63k-94k',
     address: '44 Mooresburg Diamond Street',
+    rating:['1','2','3'],
     benefits: ['Relocation', 'Flexible hours'],
     location: {
         lat: -64.894813,
@@ -397,6 +413,7 @@ export const jobs: Job[] = [{
     title: 'Mollit ea consectetur laboris laboris ea deserunt consequat pariatur irure duis.',
     salary: '66k-73k',
     address: '26 Neahkahnie Ditmars Street',
+    rating:['1','2','3'],
     benefits: ['Pay vocations', 'Flexible hours'],
     location: {
         lat: -59.558247,
@@ -421,6 +438,7 @@ export const jobs: Job[] = [{
     title: 'Sint occaecat et cillum laborum duis consectetur exercitation qui.',
     salary: '61k-95k',
     address: '7 Harrison Seigel Street',
+    rating:['1','2','3','4','5'],
     benefits: ['Relocation', 'Flexible hours'],
     location: {
         lat: -23.567546,
@@ -445,6 +463,7 @@ export const jobs: Job[] = [{
     title: 'Sint mollit exercitation aute laborum velit.',
     salary: '66k-71k',
     address: '65 Emerald Krier Place',
+    rating:['1','2'],
     benefits: ['Flexible hours'],
     location: {
         lat: 84.826374,
@@ -469,6 +488,7 @@ export const jobs: Job[] = [{
     title: 'Nostrud adipisicing adipisicing id nisi id consequat.',
     salary: '61k-92k',
     address: '94 Stouchsburg Hendrickson Street',
+    rating:['1','2','3','4'],
     benefits: ['Pay vocations', 'Relocation'],
     location: {
         lat: -29.850569,

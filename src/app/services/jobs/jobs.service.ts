@@ -12,7 +12,7 @@ export interface Job {
   title: string;
   salary: string;
   address: string;
-  rating?: number[];
+  rating?: string[];
   benefits: string[];
   location: {
     lat: number;

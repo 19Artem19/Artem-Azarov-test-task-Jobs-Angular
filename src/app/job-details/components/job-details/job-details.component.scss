@@ -12,6 +12,8 @@ li {
     line-height: 34px;
     color: #3A4562;
     font-family: 'ProximaNova-Bold';
+    border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+    padding-bottom: 9px;
 }
 
 *h3 {
@@ -29,50 +31,55 @@ li {
     font-family: 'Roboto';
 }
 
+
+
+
 .details {
     display: flex;
-    margin: 56px 19px 19px 348px;
-    width: 1920px;
-    margin: 0 auto; //!!!
+    margin: 56px 19px 19px;
+    max-width: 1920px;
+    // margin: 0 auto; //!!!
 
     &__job {
-        width: 774px;
+        max-width: 774px;
     }
 
 
     &__share {
         display: flex;
-        border-bottom: 1px solid rgba(58, 69, 98, 0.13); //?сделал прозрачность бордера так, возможно не верно
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 39px;
-
-
+        border-bottom: 1px solid rgba(58, 69, 98, 0.13);
     }
 
     &__target {
         display: flex;
+        padding-bottom: 5px;
     }
 
     &__save {
         display: flex;
         margin-right: 30px;
+    }
 
-        p {
-            padding-left: 15px;
-        }
+    &__save--button {
+        padding-right: 15px;
+    }
+
+    &__save--button-mobile {
+        display: none;
     }
 
     &__divide {
         display: flex;
 
-        p {
-            padding-left: 15px;
-        }
     }
 
-
+    &__divide--button {
+        padding-right: 15px;
+    }
 
 
     .title {
@@ -82,17 +89,23 @@ li {
 
 
         &__job {
-            width: 501px;
+            max-width: 501px;
+        }
 
-            p {
-                font-size: 24px;
-                line-height: 30px;
-                font-family: "ProximaNova-Bold";
-            }
+        &__job-description {
+            font-size: 24px;
+            line-height: 30px;
+            font-family: "ProximaNova-Bold";
+        }
+
+        &__post-mobile {
+            display: none;
+            color: #878D9D;
+            opacity: 0.4;
         }
     }
 
-    .title__post {
+    .title-post {
         margin-top: 7px;
 
         p {
@@ -107,7 +120,8 @@ li {
     }
 
     .addiditional {
-        margin-top: 87px;
+        margin-top: 86px;
+        margin-bottom: 15px;
     }
 
     .job-attached-info {
@@ -155,148 +169,237 @@ li {
         }
     }
 
-
-
-    .addiditional {
-        width: 723px;
-        border-bottom: 1px solid rgba(58, 69, 98, 0.13);
-        margin-bottom: 15px;
-
-    }
-
-    .attached {
+    .attached-container {
         margin-top: 87px;
-        width: 723px;
-        border-bottom: 1px solid rgba(58, 69, 98, 0.13)
+        max-width: 723px;
     }
+}
 
-    .return-container {
-        margin-top: 89px;
-        margin-bottom: 162px;
+.return-container {
+    margin-top: 89px;
+    margin-bottom: 162px;
 
-        &__board {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 213px;
-            height: 50px;
-            background: rgba(56, 69, 100, 0.14); //!
-            border-radius: 8px;
-            font-size: 12px;
-            line-height: 16px;
-            font-family: "ProximaNova-Semibold";
-            border: none;
-            cursor: pointer;
-            color: #3A4562;
-
-
-            &::before {
-                content: url('/assets/icons/arrow-back.svg'); //? не могу выровнять!!!
-                display: inline-block;
-                vertical-align: middle;
-            }
-        }
-    }
-
-
-
-    .picture {
+    &__button {
         display: flex;
-        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 213px;
+        height: 50px;
+        background: rgba(56, 69, 100, 0.14); //!
+        border-radius: 8px;
+        font-size: 12px;
+        line-height: 16px;
+        font-family: "ProximaNova-Semibold";
+        border: none;
+        cursor: pointer;
+        color: #3A4562;
 
-        &__job {
-            margin: 21px 10px 0 0;
 
-            &-image {
-                border-radius: 8px;
-                width: 209px;
-                height: 115px;
-            }
+        &::before {
+            content: url('/assets/icons/arrow-back.svg'); //? не могу выровнять!!!
+            display: inline-block;
+            vertical-align: middle;
         }
     }
+}
 
-    .contact-header {
-        margin-top: 63px;
-        border-bottom: 1px solid rgba(58, 69, 98, 0.13);
-        display: none;
+
+
+.picture {
+    display: flex;
+    flex-direction: row;
+
+    &__job {
+        margin: 21px 10px 0 0;
+
+        &-image {
+            border-radius: 8px;
+            width: 209px;
+            height: 115px;
+            max-width: none;
+        }
+    }
+}
+
+.contact-header {
+    margin-top: 63px;
+    display: none;
+    max-width: 723px;
+}
+
+.contact {
+    width: 402px;
+    height: 436px;
+    border: 1px solid #2A3047;
+    margin-left: 134px;
+    border-radius: 8px;
+
+    &__job {
+        height: 50%; //!
+        background-color: #2A3047;
     }
 
-    .contact {
-        width: 402px;
-        height: 436px;
-        border: 1px solid blue;
-        margin-left: 134px;
-
-        &__job {
-            height: 50%; //!
-            background-color: #2A3047;
-        }
-
-        &__info-wrapper {
-            width: 50%;
-            height: 100%;
-            border-radius: 0 112px 111px 0;
-            background-color: #202336;
+    &__info-wrapper {
+        width: 50%;
+        height: 100%;
+        border-radius: 0 112px 111px 0;
+        background-color: #202336;
 
 
-        }
+    }
 
-        &__info {
-            position: absolute;
-            margin: 25px 0 0 62px;
-            z-index: 1;
+    &__info {
+        position: absolute;
+        margin: 25px 0 0 62px;
+        z-index: 1;
 
-            h3 {
-                color: #E7EAF0;
-            }
-        }
-
-        &__info-name {
+        h3 {
             color: #E7EAF0;
-            font-family: "ProximaNova-Bold", sans-serif;
-            font-size: 20px;
-            line-height: 25px;
-
         }
+    }
 
-        &__info-address,
-        &__info-phone-email,
-        &__info-email {
-            font-size: 18px;
-            line-height: 24px;
-            font-family: 'Roboto';
-            color: #E8EBF3;
-            margin-top: 8px;
-        }
+    &__info-name {
+        color: #E7EAF0;
+        font-family: "ProximaNova-Bold", sans-serif;
+        font-size: 20px;
+        line-height: 25px;
 
     }
 
+    &__info-address,
+    &__info-phone-email,
+    &__info-email {
+        font-size: 18px;
+        line-height: 24px;
+        font-family: 'Roboto';
+        color: #E8EBF3;
+        margin-top: 8px;
+    }
 
 }
 
 
 
 
+
+
+
 @media (max-width:762px) {
     .details {
-        max-width: 414px;
         display: flex;
         flex-direction: column;
 
         &__job {
-            max-width: 414px;
             display: flex;
             flex-direction: column;
+            width: 100%;
+            padding: 24px 15px 0 15px;
+        }
+
+        &__share {
+            display: flex;
+            flex-direction: column;
+            border: none;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            h2 {
+                border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+                width: 100%;
+                padding-bottom: 12px;
+            }
+        }
+
+        &__target {
+            margin-top: 24px;
+        }
+
+        &__save--button {
+            display: none;
+        }
+
+        &__save--button-mobile {
+            display: block;
+            padding-right: 11px;
+        }
+
+
+        &__divide--button {
+            padding-right: 11px;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+
+            &__salary {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            &__post-mobile {
+                display: block;
+                margin-top: 21px;
+            }
+
+            &__salary-total {
+                display: flex;
+                flex-direction: column;
+                margin-top: 5px;
+            }
+
+            &__salary-brutto {
+                order: 1;
+            }
+        }
+
+        .title-post {
+            display: none;
+        }
+
+        .apply__second-button {
+            margin-top: 30px;
+        }
+
+        .addiditional-wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .addiditional-container {
+                order: 1;
+
+                .addiditional {
+                    margin-top: 55px;
+                    width: 100%;
+
+                    h2 {
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        .attached-container {
+            margin-top: 135px;
+
+            h2 {
+                width: 100%;
+                padding-bottom: 12px;
+                margin-bottom: 11px;
+            }
         }
 
         .type__options {
-            width: 122px;
             height: 50px;
+            width: 50%;
+            justify-content: flex-end;
+            padding-right: 15px;
         }
 
         .benefits__options {
-            width: 122px;
             height: 50px;
+            width: 50%;
         }
 
         .return-container {
@@ -314,21 +417,17 @@ li {
 
         .contact-header {
             display: flex;
-        }
 
-        .addiditional,
-        .contact-header {
-            max-width: 414px;
-        }
-
-        .attached {
-            max-width: 310px;
+            h2 {
+                width: 100%;
+                padding-bottom: 10px;
+                margin-bottom: 21px;
+            }
         }
 
         .contact {
-            max-width: 372px;
             margin: 0 auto;
+            width: 100%;
         }
-
     }
 }
