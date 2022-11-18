@@ -13,7 +13,7 @@ export class JobBoardComponent implements OnInit {
 
   jobs: Job[] = [];
   currentPage = 1;
-  itemsPerPage = 5;
+  itemsPerPage = 8;
   jobsOnView: Job[] = [];
 
 
@@ -23,7 +23,7 @@ export class JobBoardComponent implements OnInit {
     this.jobsService.getJobs().subscribe((jobs) => {
       this.jobs = jobs;
       console.log(1111,this.jobs);
-      this.jobsOnView = this.jobs.slice(0, 5);
+      this.jobsOnView = this.jobs.slice(0, 8);
       console.log(2222,this.jobsOnView);
     });
   }

@@ -18,44 +18,66 @@
 }
 
 
-.pagination {
-    display: flex;
-    justify-content: space-evenly;
-    width: 515px;
-    padding: 15px 10px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
-        0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
 
-    .page-item {
-        &:first-child {
-            border-right: 1.3px solid #dee3ef;
-            padding: 3px 31px 0 0;
-        }
+// .pagination {
+//     display: flex;
+//     align-items: baseline;
+//     border-radius: 10px;
+//     background: #fff;
+//     box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
+//         0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
 
-        &:last-child {
-            border-left: 1.3px solid #dee3ef;
-            padding: 3px 0 0 31px;
-        }
+//     .page-item:nth-child(2) {
+//         padding-left: 55px;
+//     }
 
-        &.active {
-            border-bottom: 2.6px solid #5876c5;
-            color: #5876c5;
+//     .page-item:nth-last-of-type(2) {
+//         padding-right: 55px;
+//     }
 
-            .page-link {
-                color: #5876c5;
-            }
-        }
+//     .pagination-prev {
+//         padding: 17px 0 17px 23px;
 
-        .page-link {
-            text-decoration: none;
-            color: #3a4562;
-            font-size: 21px;
-            line-height: 25px;
-            font-family: "ProximaNova-Bold";
-        }
-    }
+//         .page-link {
+//             border-right: 1.3px solid #dee3ef;
+//             padding-right: 31px;
+//         }
+//     }
+
+//     .pagination-next {
+//         padding: 17px 23px 17px 0;
+
+//         .page-link {
+//             border-left: 1.3px solid #dee3ef;
+//             padding-left: 26px;
+//         }
+//     }
+
+//     .pagination-page {
+//         text-decoration: none;
+//         padding: 12px 8px 9px;
+
+//         &.active {
+//             .page-link {
+//                 border-bottom: 2.6px solid #5876c5;
+//                 padding-bottom: 13px;
+//                 color: #5876c5;
+//             }
+//         }
+
+//         .page-link {
+//             color: #70778B;
+//             text-decoration: none;
+//             font-size: 21px;
+//             line-height: 25px;
+//             letter-spacing: 1.73333px;
+//             font-family: "ProximaNova-Bold";
+
+//         }
 
 
-}
+//     }
+
+
+
+// }

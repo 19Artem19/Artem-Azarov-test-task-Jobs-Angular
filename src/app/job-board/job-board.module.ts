@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularSvgIconModule } from 'angular-svg-icon';
-import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -14,7 +13,6 @@ import { JobBoardRoutingModule } from './job-board-routing.module';
     CommonModule,
     JobBoardRoutingModule,
     AngularSvgIconModule,
-    PaginationModule.forRoot(),
     SharedModule,
   ],
 })

@@ -12,6 +12,7 @@ export class JobDetailsComponent implements OnInit {
 
   job?: Job;
 
+
   constructor(private route: ActivatedRoute, private jobsService: JobsService) {
     route.params
       .pipe(switchMap((params) => this.jobsService.getJobById(params['id'])))

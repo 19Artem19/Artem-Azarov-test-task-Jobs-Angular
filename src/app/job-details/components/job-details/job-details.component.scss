@@ -208,6 +208,7 @@ li {
 .picture {
     display: flex;
     flex-direction: row;
+    overflow-y: hidden;
 
     &__job {
         margin: 21px 10px 0 0;

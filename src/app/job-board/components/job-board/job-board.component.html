@@ -38,12 +38,12 @@
       </div>
     </div>
     <div class="pagination-container">
-      <pagination class="pagination-items" [totalItems]="jobs.length" (pageChanged)="pageChanged($event)"
-        [itemsPerPage]="5" [customPreviousTemplate]="prevTemplate" [customNextTemplate]="nextTemplate"></pagination>
+      <!-- <pagination class="pagination-items" [totalItems]="jobs.length" (pageChanged)="pageChanged($event)"
+        [itemsPerPage]="4" [customPreviousTemplate]="prevTemplate" [customNextTemplate]="nextTemplate"></pagination> -->
     </div>
   </div>
 
-  <ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
+  <!-- <ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
     <ng-container *ngIf="!disabled">
       <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
         [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
@@ -63,5 +63,5 @@
       <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
         [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
     </ng-container>
-  </ng-template>
+  </ng-template> -->
 </div>
