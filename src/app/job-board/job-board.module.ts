@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { SharedModule } from '../shared/shared.module';
 
@@ -14,6 +15,7 @@ import { JobBoardRoutingModule } from './job-board-routing.module';
     JobBoardRoutingModule,
     AngularSvgIconModule,
     SharedModule,
+    NgbPaginationModule
   ],
 })
 export class JobBoardModule {}

@@ -1,8 +1,9 @@
 <div class="wrapper-container">
   <div class="job-wrapper">
-    <div class="job" *ngFor="let data of jobsOnView; index as i" [routerLink]="['/details', data.id]">
+    <div class="job" *ngFor="let data of jobs | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i"
+      [routerLink]="['/details', data.id]">
       <div class="job__image-container">
-        <img class="job__image" [src]="data.pictures[0] + '?q=' + i + '-' + currentPage" />
+        <img class="job__image" [src]="data.pictures[0] + '?q=' + i + '-' " />
       </div>
 
       <div class="job__content">
@@ -38,30 +39,22 @@
       </div>
     </div>
     <div class="pagination-container">
-      <!-- <pagination class="pagination-items" [totalItems]="jobs.length" (pageChanged)="pageChanged($event)"
-        [itemsPerPage]="4" [customPreviousTemplate]="prevTemplate" [customNextTemplate]="nextTemplate"></pagination> -->
+      <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="jobs.length" [maxSize]="5">
+      </ngb-pagination>
     </div>
   </div>
 
-  <!-- <ng-template #nextTemplate let-disabled="disabled" let-currentPage="currentPage">
-    <ng-container *ngIf="!disabled">
-      <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
-        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-    </ng-container>
-    <ng-container *ngIf="disabled">
-      <svg-icon class="pagination-marker" src="/assets/icons/arrow-right.svg"
-        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-    </ng-container>
-  </ng-template>
-
-  <ng-template #prevTemplate let-disabled="disabled" let-currentPage="currentPage">
-    <ng-container *ngIf="!disabled">
-      <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
-        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-    </ng-container>
-    <ng-container *ngIf="disabled">
-      <svg-icon class="pagination-marker" src="/assets/icons/arrow-left.svg"
-        [svgStyle]="{ 'width.px': 14, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-    </ng-container>
-  </ng-template> -->
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

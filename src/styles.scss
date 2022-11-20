@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+// @import '~bootstrap/scss/bootstrap';
 @import '../node_modules/scss-reset/_reset.scss';
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
@@ -19,65 +21,91 @@
 
 
 
-// .pagination {
-//     display: flex;
-//     align-items: baseline;
-//     border-radius: 10px;
-//     background: #fff;
-//     box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
-//         0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+.pagination {
+    display: flex;
+    align-items: baseline;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
+        0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
 
-//     .page-item:nth-child(2) {
-//         padding-left: 55px;
-//     }
+    .page-item:first-child {
+        .page-link {
+            border-right: 1.3px solid #DEE3EF;
+            background-image: url('./assets/icons/arrow-left.svg');
+            background-repeat: no-repeat;
+            width: 14px;
+            height: 18px;
+            display: inline-block;
+            padding: 10px 31px 5px;
+            margin-left: 15px;
 
-//     .page-item:nth-last-of-type(2) {
-//         padding-right: 55px;
-//     }
-
-//     .pagination-prev {
-//         padding: 17px 0 17px 23px;
-
-//         .page-link {
-//             border-right: 1.3px solid #dee3ef;
-//             padding-right: 31px;
-//         }
-//     }
-
-//     .pagination-next {
-//         padding: 17px 23px 17px 0;
-
-//         .page-link {
-//             border-left: 1.3px solid #dee3ef;
-//             padding-left: 26px;
-//         }
-//     }
-
-//     .pagination-page {
-//         text-decoration: none;
-//         padding: 12px 8px 9px;
-
-//         &.active {
-//             .page-link {
-//                 border-bottom: 2.6px solid #5876c5;
-//                 padding-bottom: 13px;
-//                 color: #5876c5;
-//             }
-//         }
-
-//         .page-link {
-//             color: #70778B;
-//             text-decoration: none;
-//             font-size: 21px;
-//             line-height: 25px;
-//             letter-spacing: 1.73333px;
-//             font-family: "ProximaNova-Bold";
-
-//         }
+            span {
+                display: none;
+            }
+        }
 
 
-//     }
+    }
+
+    .page-item:last-child {
+        .page-link {
+            border-left: 1.3px solid #DEE3EF;
+            background-image: url('./assets/icons/arrow-right.svg');
+            background-repeat: no-repeat;
+            width: 14px;
+            height: 18px;
+            display: inline-block;
+            padding: 10px 0 5px 31px;
+            margin-right: 15px;
+            overflow: hidden;
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+
+    .page-item:nth-child(2) {
+        padding-left: 55px;
+    }
+
+    .page-item:nth-last-of-type(2) {
+        padding-right: 55px;
+    }
+
+    .visually-hidden {
+        display: none;
+    }
+
+    .page-item {
+        text-decoration: none;
+        padding: 12px 8px 9px;
+
+        &.active {
+            .page-link {
+                border-bottom: 2.6px solid #5876c5;
+                color: #5876c5;
+                padding-bottom: 6px;
+            }
+        }
+
+        .page-link {
+            color: #70778B;
+            text-decoration: none;
+            font-size: 21px;
+            line-height: 25px;
+            letter-spacing: 1.73333px;
+            font-family: "ProximaNova-Bold";
+
+        }
+
+
+    }
 
 
 
-// }
+}
+
+@media(max-width:767px) {}

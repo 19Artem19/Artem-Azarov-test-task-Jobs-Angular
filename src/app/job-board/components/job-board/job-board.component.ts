@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { JobsService, Job } from '../../../services';
-import { PageChangedEvent } from 'ngx-bootstrap/pagination';
+// import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 @Component({
   selector: 'app-job-board',
   templateUrl: './job-board.component.html',
@@ -14,7 +14,9 @@ export class JobBoardComponent implements OnInit {
   jobs: Job[] = [];
   currentPage = 1;
   itemsPerPage = 8;
-  jobsOnView: Job[] = [];
+  // jobsOnView: Job[] = [];
+  page:number = 1;
+  pageSize:number = 2;
 
 
   constructor(private jobsService: JobsService) { }
@@ -22,18 +24,18 @@ export class JobBoardComponent implements OnInit {
   ngOnInit(): void {
     this.jobsService.getJobs().subscribe((jobs) => {
       this.jobs = jobs;
-      console.log(1111,this.jobs);
-      this.jobsOnView = this.jobs.slice(0, 8);
-      console.log(2222,this.jobsOnView);
+      console.log('jobs',this.jobs);
+      // this.jobsOnView = this.jobs.slice(0, 20);
+      // console.log('jobsOnView',this.jobsOnView);
     });
   }
 
-  pageChanged(event: PageChangedEvent): void {
-    this.currentPage = event.page;
-    const startItem = (event.page - 1) * event.itemsPerPage;
-    const endItem = event.page * event.itemsPerPage;
-    this.jobsOnView = this.jobs.slice(startItem, endItem);
-  }
+  // pageChanged(event: PageChangedEvent): void {
+  //   this.currentPage = event.page;
+  //   const startItem = (event.page - 1) * event.itemsPerPage;
+  //   const endItem = event.page * event.itemsPerPage;
+  //   this.jobsOnView = this.jobs.slice(startItem, endItem);
+  // }
 
   saveJob(event: MouseEvent, id: number) {
     event.preventDefault();

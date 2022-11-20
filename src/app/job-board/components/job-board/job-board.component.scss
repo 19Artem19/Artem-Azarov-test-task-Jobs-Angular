@@ -5,7 +5,7 @@
 }
 
 .wrapper-container {
-    background-color: #EFF0F5;
+    background-color: #F5F5F5;
 }
 
 .job {
@@ -30,7 +30,7 @@
         width: 85px;
 
         .job__image {
-            object-fit: fill;
+            object-fit: cover;
             width: 85px;
             height: 85px;
             border-radius: 50%;
@@ -58,17 +58,21 @@
         font-size: 20px;
         line-height: 25px;
         font-family: "ProximaNova-Bold", sans-serif;
+        letter-spacing: -0.625px;
         color: #3a4562;
         margin-bottom: 8px;
     }
 
     &__department {
         margin-bottom: 8px;
+        letter-spacing: 0.23619px;
+        font-family: "ProximaNova-Regular";
+        font-size: 16px;
+        line-height: 25px;
     }
 
     &__location {
         display: flex;
-        align-items: center;
 
         &-marker {
             display: flex;
@@ -76,6 +80,10 @@
 
         &-address {
             margin-left: 8px;
+            font-family: "ProximaNova-Regular";
+            font-size: 16px;
+            line-height: 25px;
+            letter-spacing: 0.23619px;
         }
     }
 
@@ -104,17 +112,16 @@
     display: flex;
     justify-content: center;
     margin: 49px auto;
-    // max-width: 515px;
 }
 
 @media(max-width:767px) {
     .job-wrapper {
-        background-color: #EFF0F5;
+        background-color: #E6E9F2;
         margin: 9px 9x 9px 26px;
     }
 
     .job {
-        background-color: #EFF0F5;
+        background-color: #F5F5F5;
         width: 100%;
         padding: 13px 16px;
 
@@ -169,19 +176,26 @@
 
     }
 
-    // .pagination-container {
-    //     display: flex;
-    //     justify-content: center;
-    //     margin: 26px auto;
+    .pagination-container {
+
+        .page-item:nth-child(2) {
+            padding-left: 42px;
+        }
+
+        .page-item:nth-last-of-type(2) {
+            padding-right: 42px;
+        }
+
+        .page-item:last-child {
+            display: none;
+        }
+
+        .page-item:first-child {
+            display: none;
+        }
+    }
 
 
-    //     .pagination-items {
-    //         width: 100%;
-    //     }
 
-    //     .pagination {
-    //         width: 100%;
-    //     }
-    // }
 
 }

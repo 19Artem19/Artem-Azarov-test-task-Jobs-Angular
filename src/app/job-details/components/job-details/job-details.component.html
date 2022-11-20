@@ -57,13 +57,13 @@
                     <h4>Employment Type</h4>
                     <div class="type">
                         <ng-container *ngFor="let type of job.employment_type | keyvalue">
-                            <span class="type__options">{{ type.value }}</span>
+                            <span class="options">{{ type.value }}</span>
                         </ng-container>
                     </div>
                     <h4>Benefits</h4>
                     <div class="benefits">
                         <ng-container *ngFor="let benefit of job.benefits | keyvalue">
-                            <span class="benefits__options">{{ benefit.value }}</span>
+                            <span class="options options--benefits">{{ benefit.value }}</span>
                         </ng-container>
                     </div>
                 </div>
@@ -109,6 +109,15 @@
                     </div>
                 </div>
                 <div class="contact__map">
+
+                    <!-- <img [src]="job.location.lat + job.location.long" alt=""> -->
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=370x218&style=feature:all|color:0x485067&style=feature:landscape|color:0x2b334a&style=feature:administrative|color:0x989fb1&maptype=roadmap
+                    &markers=color:0xd8d8d8%7Clabel:S%7C40.702147,-74.015794&markers=color:0xd8d8d8%7Clabel:G%7C40.711614,-74.012318
+                    &markers=color:0xd8d8d8%7Clabel:C%7C40.718217,-73.998284
+                    &key=AIzaSyCa5hWR3DMR9EbwT1A-XT2Sy5m2vhDIPi0" alt="">
+
+                    
+                    <!--&signature=_P7BNJ3BQd41qvQ1Jz3eXJ0Ctzk= dont work with this !!!-->
                 </div>
             </div>
         </div>

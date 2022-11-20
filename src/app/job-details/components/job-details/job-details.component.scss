@@ -1,9 +1,10 @@
-*p,
-li {
+*p {
     color: #3A4562;
     font-size: 18px;
     line-height: 24px;
     font-family: 'Roboto';
+    letter-spacing: -0.5625px;
+
 }
 
 *h2 {
@@ -12,7 +13,8 @@ li {
     line-height: 34px;
     color: #3A4562;
     font-family: 'ProximaNova-Bold';
-    border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+    letter-spacing: 0.413333px;
+    border-bottom: 1px solid#e5e7ea;
     padding-bottom: 9px;
 }
 
@@ -22,6 +24,7 @@ li {
     line-height: 25px;
     color: #3A4562;
     font-family: 'ProximaNova-Bold';
+    letter-spacing: -0.625px;
 }
 
 *h4 {
@@ -29,6 +32,8 @@ li {
     font-size: 18px;
     line-height: 24px;
     font-family: 'Roboto';
+    letter-spacing: -0.5625px;
+    margin-bottom: 10px;
 }
 
 
@@ -36,12 +41,12 @@ li {
 
 .details {
     display: flex;
-    margin: 56px 19px 19px;
-    max-width: 1920px;
-    // margin: 0 auto; //!!!
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 56px 0 162px;
 
     &__job {
-        max-width: 774px;
+        max-width: 774px; //???
     }
 
 
@@ -51,7 +56,11 @@ li {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 39px;
-        border-bottom: 1px solid rgba(58, 69, 98, 0.13);
+        border-bottom: 1px solid#e5e7ea;
+
+        h2 {
+            border-bottom: none;
+        }
     }
 
     &__target {
@@ -74,7 +83,6 @@ li {
 
     &__divide {
         display: flex;
-
     }
 
     &__divide--button {
@@ -87,7 +95,6 @@ li {
         justify-content: space-between;
         margin-top: 32px;
 
-
         &__job {
             max-width: 501px;
         }
@@ -96,12 +103,12 @@ li {
             font-size: 24px;
             line-height: 30px;
             font-family: "ProximaNova-Bold";
+            letter-spacing: -0.75px;
         }
 
         &__post-mobile {
             display: none;
-            color: #878D9D;
-            opacity: 0.4;
+            color: #b8bbc5;
         }
     }
 
@@ -109,14 +116,8 @@ li {
         margin-top: 7px;
 
         p {
-            color: #878D9D;
-            opacity: 0.4;
+            color: #b8bbc5;
         }
-    }
-
-
-    .description {
-        max-width: 721px;
     }
 
     .addiditional {
@@ -128,56 +129,45 @@ li {
         margin-top: 87px;
     }
 
-    .type {
-        display: flex;
-
-        &__options {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 222px;
-            height: 49px;
-            background: rgba(161, 177, 219, 0.317343); //!
-            border-radius: 8px;
-            color: #55699E;
-            font-size: 16px;
-            line-height: 16px;
-            border: 1px solid rgba(85, 105, 158, 0.3); //!
-            margin: 10px 8px 23px 0;
-            font-family: "ProximaNova-Bold";
-        }
-
-    }
-
+    .type,
     .benefits {
         display: flex;
+    }
 
-        &__options {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 222px;
-            height: 49px;
-            background: rgba(255, 207, 0, 0.15); //!
+    .options {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 17px 0;
+        width: 222px;
+        background: #e1e6f4;
+        border-radius: 8px;
+        color: #55699E;
+        font-size: 16px;
+        line-height: 16px;
+        border: 1px solid #b7c0da;
+        margin: 0px 8px 23px 0;
+        font-family: "ProximaNova-Bold";
+
+        &--benefits {
+            background: #fff8d9;
             border-radius: 8px;
             color: #988B49;
-            font-size: 16px;
-            line-height: 16px;
-            border: 1px solid #FFCF00; //!
-            margin: 10px 8px 0 0;
-            font-family: "ProximaNova-Bold";
+            border: 1px solid #FFCF00;
         }
     }
+
+
 
     .attached-container {
         margin-top: 87px;
-        max-width: 723px;
+        max-width: 723px; //??
     }
 }
 
 .return-container {
     margin-top: 89px;
-    margin-bottom: 162px;
+
 
     &__button {
         display: flex;
@@ -185,7 +175,7 @@ li {
         justify-content: space-evenly;
         width: 213px;
         height: 50px;
-        background: rgba(56, 69, 100, 0.14); //!
+        background: #E4E5EA;
         border-radius: 8px;
         font-size: 12px;
         line-height: 16px;
@@ -218,6 +208,7 @@ li {
             width: 209px;
             height: 115px;
             max-width: none;
+            object-fit: cover;
         }
     }
 }
@@ -229,30 +220,21 @@ li {
 }
 
 .contact {
-    width: 402px;
-    height: 436px;
     border: 1px solid #2A3047;
     margin-left: 134px;
     border-radius: 8px;
 
     &__job {
-        height: 50%; //!
         background-color: #2A3047;
     }
 
     &__info-wrapper {
-        width: 50%;
-        height: 100%;
         border-radius: 0 112px 111px 0;
         background-color: #202336;
-
-
     }
 
     &__info {
-        position: absolute;
-        margin: 25px 0 0 62px;
-        z-index: 1;
+        padding: 30px 63px;
 
         h3 {
             color: #E7EAF0;
@@ -337,6 +319,8 @@ li {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+                margin-top: 5px;
+
             }
 
             &__post-mobile {
@@ -391,17 +375,16 @@ li {
             }
         }
 
-        .type__options {
-            height: 50px;
-            width: 50%;
+        .options {
             justify-content: flex-end;
             padding-right: 15px;
+
+            &--benefits {
+                justify-content: center;
+            }
         }
 
-        .benefits__options {
-            height: 50px;
-            width: 50%;
-        }
+
 
         .return-container {
             display: none;
@@ -416,19 +399,25 @@ li {
             justify-content: center;
         }
 
-        .contact-header {
-            display: flex;
 
-            h2 {
-                width: 100%;
-                padding-bottom: 10px;
-                margin-bottom: 21px;
+        .contact-wrapper {
+            padding: 0 15px;
+
+
+            .contact-header {
+                display: flex;
+
+                h2 {
+                    width: 100%;
+                    padding-bottom: 10px;
+                    margin-bottom: 21px;
+                }
             }
-        }
 
-        .contact {
-            margin: 0 auto;
-            width: 100%;
+            .contact {
+                margin: 0 auto;
+                width: 100%;
+            }
         }
     }
 }
