@@ -134,12 +134,11 @@
         display: flex;
     }
 
-    .options {
+    .label {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 17px 0;
-        width: 222px;
+        padding: 16px 79px;
         background: #e1e6f4;
         border-radius: 8px;
         color: #55699E;
@@ -149,7 +148,7 @@
         margin: 0px 8px 23px 0;
         font-family: "ProximaNova-Bold";
 
-        &--benefits {
+        &--warning {
             background: #fff8d9;
             border-radius: 8px;
             color: #988B49;
@@ -170,11 +169,6 @@
 
 
     &__button {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 213px;
-        height: 50px;
         background: #E4E5EA;
         border-radius: 8px;
         font-size: 12px;
@@ -183,14 +177,22 @@
         border: none;
         cursor: pointer;
         color: #3A4562;
+        position: relative;
+        padding: 17px 27px 17px 41px;
+        right: 85px;
+
 
 
         &::before {
             content: url('/assets/icons/arrow-back.svg'); //? не могу выровнять!!!
+            position: absolute;
             display: inline-block;
             vertical-align: middle;
+            left: 20px;
+            top: 15px;
         }
     }
+
 }
 
 
@@ -326,6 +328,12 @@
             &__post-mobile {
                 display: block;
                 margin-top: 21px;
+
+                p {
+                    color: #b8bbc5;
+                    font-size: 13px;
+                    line-height: 25px;
+                }
             }
 
             &__salary-total {
@@ -375,16 +383,11 @@
             }
         }
 
-        .options {
+        .label {
             justify-content: flex-end;
             padding-right: 15px;
-
-            &--benefits {
-                justify-content: center;
-            }
+            padding-left: 27px;
         }
-
-
 
         .return-container {
             display: none;

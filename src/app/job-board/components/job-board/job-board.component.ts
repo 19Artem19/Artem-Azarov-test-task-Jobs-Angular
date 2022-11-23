@@ -14,9 +14,8 @@ export class JobBoardComponent implements OnInit {
   jobs: Job[] = [];
   currentPage = 1;
   itemsPerPage = 8;
-  // jobsOnView: Job[] = [];
   page:number = 1;
-  pageSize:number = 2;
+  pageSize:number = 5;
 
 
   constructor(private jobsService: JobsService) { }
@@ -25,17 +24,9 @@ export class JobBoardComponent implements OnInit {
     this.jobsService.getJobs().subscribe((jobs) => {
       this.jobs = jobs;
       console.log('jobs',this.jobs);
-      // this.jobsOnView = this.jobs.slice(0, 20);
-      // console.log('jobsOnView',this.jobsOnView);
     });
   }
 
-  // pageChanged(event: PageChangedEvent): void {
-  //   this.currentPage = event.page;
-  //   const startItem = (event.page - 1) * event.itemsPerPage;
-  //   const endItem = event.page * event.itemsPerPage;
-  //   this.jobsOnView = this.jobs.slice(startItem, endItem);
-  // }
 
   saveJob(event: MouseEvent, id: number) {
     event.preventDefault();
