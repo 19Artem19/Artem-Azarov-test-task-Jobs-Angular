@@ -12,7 +12,7 @@ import { environment } from '../../../../environments/environment'
 export class JobDetailsComponent implements OnInit {
 
   job?: Job;
-  googleMapsKeys = environment.googleMapsKey
+  // googleMapsKeys = environment.googleMapsKey //! work with Api Key Google
   googleApiUrl = 'https://maps.googleapis.com/maps/api/staticmap'
 
   mapConfig: Record<string, string>[] = [{
@@ -48,7 +48,7 @@ export class JobDetailsComponent implements OnInit {
     }, '')
   }
 
-  get getMapUrl(): string {
+  /* get getMapUrl(): string { //! work with Api Key Google
     if (!this.job) {
       return ''
     }
@@ -61,6 +61,7 @@ export class JobDetailsComponent implements OnInit {
       coordinats +
       `&key=${this.googleMapsKeys}`)
   }
+  */
 
   constructor(private route: ActivatedRoute, private jobsService: JobsService) {
     route.params
