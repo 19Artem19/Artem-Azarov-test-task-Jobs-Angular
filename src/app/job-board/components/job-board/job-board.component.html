@@ -19,12 +19,10 @@
 
         <div class="job__info">
           <div class="job__rating">
-            <svg-icon class="job__rating-marker-mobile" src="/assets/icons/rating.svg"
-              *ngFor="let rating of data.rating | keyvalue" [svgStyle]="{ 'width.px': 10, 'height.px': 10 } ">
-              {{rating.value}}</svg-icon>
-            <svg-icon class="job__rating-marker" src="/assets/icons/rating.svg"
-              *ngFor="let rating of data.rating | keyvalue" [svgStyle]="{ 'width.px': 19, 'height.px': 18 } ">
-              {{rating.value}}</svg-icon>
+            <svg-icon *ngFor="let rating of data.rating| keyvalue"  class="job__rating-marker-mobile" src="/assets/icons/rating.svg"
+              [svgStyle]="{ 'width.px': 10, 'height.px': 10 } ">{{rating.value}}</svg-icon>
+            <svg-icon  *ngFor="let rating of data.rating| keyvalue" class="job__rating-marker" src="/assets/icons/rating.svg"
+              [svgStyle]="{ 'width.px': 19, 'height.px': 18 }">{{rating.value}}</svg-icon>
           </div>
           <div class="job__select">
             <button class="job__save" (click)="saveJob($event, 1)">
@@ -39,22 +37,10 @@
       </div>
     </div>
     <div class="pagination-container">
-      <ngb-pagination class="pagination-wrapper" [(page)]="page" [pageSize]="pageSize" [rotate]="true" [collectionSize]="jobs.length" [maxSize]="5">
+      <ngb-pagination class="pagination-wrapper" [(page)]="page" [pageSize]="pageSize" [rotate]="true"
+        [collectionSize]="jobs.length" [maxSize]="5">
       </ngb-pagination>
     </div>
   </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-

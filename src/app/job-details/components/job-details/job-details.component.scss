@@ -46,9 +46,8 @@
     padding: 56px 0 162px;
 
     &__job {
-        max-width: 774px; //???
+        max-width: 774px;
     }
-
 
     &__share {
         display: flex;
@@ -160,12 +159,12 @@
 
     .attached-container {
         margin-top: 87px;
-        max-width: 723px; //??
+        max-width: 723px;
     }
 }
 
 .return-container {
-    margin-top: 89px;
+    margin: 89px 0 0 25px;
 
 
     &__button {
@@ -184,7 +183,7 @@
 
 
         &::before {
-            content: url('/assets/icons/arrow-back.svg'); //? не могу выровнять!!!
+            content: url('/assets/icons/arrow-back.svg');
             position: absolute;
             display: inline-block;
             vertical-align: middle;
@@ -194,8 +193,6 @@
     }
 
 }
-
-
 
 .picture {
     display: flex;
@@ -225,18 +222,22 @@
     border: 1px solid #2A3047;
     margin-left: 134px;
     border-radius: 8px;
+    max-width: 402px;
 
     &__job {
         background-color: #2A3047;
+        border-radius: 8px 8px 0px 0px;
     }
 
     &__info-wrapper {
-        border-radius: 0 112px 111px 0;
-        background-color: #202336;
+        background-image: url('../../../../assets/icons/Combined\ Shape.svg');
+        background-repeat: no-repeat;
+        border-radius: 7px;
     }
 
     &__info {
-        padding: 30px 63px;
+        padding: 31px 63px;
+        min-height: 218px;
 
         h3 {
             color: #E7EAF0;
@@ -248,7 +249,6 @@
         font-family: "ProximaNova-Bold", sans-serif;
         font-size: 20px;
         line-height: 25px;
-
     }
 
     &__info-address,
@@ -261,13 +261,14 @@
         margin-top: 8px;
     }
 
+
+    .map {
+        min-height: 218px;
+        object-fit: cover;
+        border-radius: 0px 0px 7px 7px;
+    }
+
 }
-
-
-
-
-
-
 
 @media (max-width:762px) {
     .details {
@@ -416,10 +417,36 @@
                     margin-bottom: 21px;
                 }
             }
+        }
 
-            .contact {
-                margin: 0 auto;
-                width: 100%;
+        .contact {
+            margin: 0 auto;
+            max-width: 402px;
+
+            h3 {
+                font-size: 16px;
+                font-weight: 20px;
+            }
+
+            &__info-wrapper {
+                background-color: #2A3047;
+            }
+
+            &__info-name {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            &__info-address {
+                margin-top: 17px;
+            }
+
+            &__info-phone-email,
+            &__info-email {
+                font-size: 16px;
+                line-height: 23px;
+                color: #b9bbc2;
+                margin-top: 6px;
             }
         }
     }
