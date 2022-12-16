@@ -4,7 +4,6 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { SharedModule } from '../shared/shared.module';
-
 import { COMPONENTS } from './components';
 import { JobBoardRoutingModule } from './job-board-routing.module';
 

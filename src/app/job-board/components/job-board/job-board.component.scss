@@ -17,7 +17,6 @@
     box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08),
         0px 2px 1px -1px rgba(0, 0, 0, 0.04),
         0px 1px 3px rgba(0, 0, 0, 0.12);
-
     font-size: 16px;
     line-height: 25px;
     color: #878d9d;
@@ -92,13 +91,8 @@
         display: flex;
         align-items: center;
         min-width: 96px;
-
-
     }
 
-    &__rating-marker-mobile {
-        display: none;
-    }
 
     &__select {
         margin-left: 32px;
@@ -162,19 +156,16 @@
         }
 
         &__rating-marker {
-            display: none;
-        }
-
-        &__rating-marker-mobile {
-            display: block;
+            svg {
+                width: 10px !important;
+                height: 10px !important
+            }
         }
 
         &__info {
             display: flex;
             justify-content: space-between;
         }
-
-
     }
 
     .pagination-wrapper {

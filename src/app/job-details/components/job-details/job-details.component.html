@@ -5,19 +5,18 @@
                 <h2>Job Details</h2>
                 <div class="details__target">
                     <div class="details__save">
-                        <button class="details__save--button" (click)="saveJob($event, 1)">
+                        <button class="details__save--button" (click)="saveJob($event)">
                             <svg-icon src="/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
                             </svg-icon>
                         </button>
-                        <button class="details__save--button-mobile" (click)="saveJob($event, 1)">
+                        <button class="details__save--button-mobile" (click)="saveJob($event)">
                             <svg-icon src="/assets/icons/save-star.svg"
-                                [svgStyle]="{ 'width.px': 21, 'height.px': 20 }">
-                            </svg-icon>
+                                [svgStyle]="{ 'width.px': 21, 'height.px': 20 }"> </svg-icon>
                         </button>
                         <p>Save to my list</p>
                     </div>
                     <div class="details__divide">
-                        <button class="details__divide--button" (click)="saveJob($event, 1)">
+                        <button class="details__divide--button" (click)="saveJob($event)">
                             <svg-icon src="/assets/icons/share.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
                             </svg-icon>
                         </button>
@@ -25,14 +24,16 @@
                     </div>
                 </div>
             </div>
+
             <app-apply-job class="apply__first-button"></app-apply-job>
+
             <div class="title">
                 <div class="title__job">
                     <p class="title__job-description">{{ job.title }}</p>
                 </div>
                 <div class="title__salary">
                     <div class="title__post-mobile">
-                        <p> Posted {{ job.createdAt | dateAgo }}</p>
+                        <p>Posted {{ job.createdAt | dateAgo }}</p>
                     </div>
                     <div class="title__salary-total">
                         <h3 class="title__salary-brutto">{{ job.salary }}</h3>
@@ -40,15 +41,19 @@
                     </div>
                 </div>
             </div>
+
             <div class="title-post">
-                <p> Posted {{ job.createdAt | dateAgo }}</p>
+                <p>Posted {{ job.createdAt | dateAgo }}</p>
             </div>
+
             <div class="description">
                 <div class="description__job">
                     <p [innerText]="job.description"></p>
                 </div>
             </div>
+
             <app-apply-job class="apply__second-button"></app-apply-job>
+
             <div class="addiditional-wrapper">
                 <div class="addiditional-container">
                     <div class="addiditional">
@@ -76,40 +81,39 @@
                     </div>
                 </div>
             </div>
+
             <div class="return-container">
-                <button class="return-container__button" routerLink="/">
-                    RETURN TO A JOB BOARD
-                </button>
+                <button class="return-container__button" routerLink="/">RETURN TO A JOB BOARD</button>
             </div>
         </div>
+
         <div class="contact-wrapper">
             <div class="contact-header">
                 <h2>Contacts</h2>
             </div>
+
             <div class="contact">
                 <div class="contact__job">
                     <div class="contact__info-wrapper">
                         <div class="contact__info">
-                            <h3> Department name.</h3>
-                            <div class="contact__info-name">
-                                {{job.name}}.
-                            </div>
+                            <h3>Department name.</h3>
+                            <div class="contact__info-name">{{ job.name }}.</div>
                             <div class="contact__info-address">
                                 <svg-icon class="job__location-marker" src="/assets/icons/location-marker.svg"
                                     [svgStyle]="{ 'width.px': 13, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
-                                {{job.address}}
+                                {{ job.address }}
                             </div>
                             <div class="contact__info-phone-email">
-                                {{job.phone}}
+                                {{ job.phone }}
                             </div>
                             <div class="contact__info-email">
-                                {{job.email}}
+                                {{ job.email }}
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact__map">
-                    <!-- <img class="map" [src]="getMapUrl" alt="Map with address work"> Work with Api Key Google -->
+                    <img class="map" [src]="getMapUrl" alt="Map with address work"> Work with Api Key Google
                 </div>
             </div>
         </div>

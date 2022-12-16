@@ -3,7 +3,7 @@
     <div class="job" *ngFor="let data of jobs | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i"
       [routerLink]="['/details', data.id]">
       <div class="job__image-container">
-        <img class="job__image" [src]="data.pictures[0] + '?q=' + i + '-' " />
+        <img class="job__image" [src]="data.pictures[0] + '?q=' + i + '-'" />
       </div>
 
       <div class="job__content">
@@ -19,13 +19,12 @@
 
         <div class="job__info">
           <div class="job__rating">
-            <svg-icon *ngFor="let rating of data.rating| keyvalue"  class="job__rating-marker-mobile" src="/assets/icons/rating.svg"
-              [svgStyle]="{ 'width.px': 10, 'height.px': 10 } ">{{rating.value}}</svg-icon>
-            <svg-icon  *ngFor="let rating of data.rating| keyvalue" class="job__rating-marker" src="/assets/icons/rating.svg"
-              [svgStyle]="{ 'width.px': 19, 'height.px': 18 }">{{rating.value}}</svg-icon>
+            <svg-icon *ngFor="let rating of data.rating| rating" class="job__rating-marker"
+              src="/assets/icons/rating.svg" [svgStyle]="{ 'width.px': 19, 'height.px': 18 }">{{rating}}
+            </svg-icon>
           </div>
           <div class="job__select">
-            <button class="job__save" (click)="saveJob($event, 1)">
+            <button class="job__save" (click)="saveJob($event,data.id)">
               <svg-icon src="/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
               </svg-icon>
             </button>

@@ -155,8 +155,6 @@
         }
     }
 
-
-
     .attached-container {
         margin-top: 87px;
         max-width: 723px;
@@ -165,7 +163,6 @@
 
 .return-container {
     margin: 89px 0 0 25px;
-
 
     &__button {
         background: #E4E5EA;
@@ -180,8 +177,6 @@
         padding: 17px 27px 17px 41px;
         right: 85px;
 
-
-
         &::before {
             content: url('/assets/icons/arrow-back.svg');
             position: absolute;
@@ -191,7 +186,6 @@
             top: 15px;
         }
     }
-
 }
 
 .picture {
@@ -260,7 +254,6 @@
         color: #E8EBF3;
         margin-top: 8px;
     }
-
 
     .map {
         min-height: 218px;
@@ -406,7 +399,6 @@
 
         .contact-wrapper {
             padding: 0 15px;
-
 
             .contact-header {
                 display: flex;

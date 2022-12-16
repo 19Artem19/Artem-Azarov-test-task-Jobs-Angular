@@ -11,10 +11,8 @@ export const jobs: Job[] = [{
     address: '76 Blende Jardine Place',
     benefits: ['Pay vocations', 'Flexible hours'],
     location: {
-        lat: 50.5217024,
-        long: 30.4478525,
-        // lat: 30.4478525,
-        // long:  50.5217024,
+        lat: 30.4478525,
+        long:  50.5217024,
     },
     pictures: [
         'https://picsum.photos/200/300',
