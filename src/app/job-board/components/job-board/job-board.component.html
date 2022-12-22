@@ -11,7 +11,7 @@
           <h2 class="job__title">{{ data.title }}</h2>
           <p class="job__department">Department Name * {{ data.name }}</p>
           <div class="job__location">
-            <svg-icon class="job__location-marker" src="/Artem-Azarov-test-task-Jobs-Angular/assets/icons/location-marker.svg"
+            <svg-icon class="job__location-marker" src="/assets/icons/location-marker.svg"
               [svgStyle]="{ 'width.px': 13, 'height.px': 18, fill: '#878D9D' }"></svg-icon>
             <p class="job__location-address">{{ data.address }}</p>
           </div>
@@ -20,12 +20,12 @@
         <div class="job__info">
           <div class="job__rating">
             <svg-icon *ngFor="let rating of data.rating| rating" class="job__rating-marker"
-              src="/Artem-Azarov-test-task-Jobs-Angular/assets/icons/rating.svg" [svgStyle]="{ 'width.px': 19, 'height.px': 18 }">{{rating}}
+              src="/assets/icons/rating.svg" [svgStyle]="{ 'width.px': 19, 'height.px': 18 }">{{rating}}
             </svg-icon>
           </div>
           <div class="job__select">
             <button class="job__save" (click)="saveJob($event,data.id)">
-              <svg-icon src="/Artem-Azarov-test-task-Jobs-Angular/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
+              <svg-icon src="/assets/icons/save.svg" [svgStyle]="{ 'width.px': 16, 'height.px': 20 }">
               </svg-icon>
             </button>
             <div class="job__post">
